@@ -97,6 +97,23 @@ services:
       SCHEMA_REGISTRY_HOST_NAME: 'schema-registry'
     networks:
       - kafka-net
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://schema-registry:8085/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      
+  schema-registry-init:
+    image: confluentinc/cp-kafka:latest
+    volumes:
+      - ./schema-registry/entrypoint.sh:/scripts/entrypoint.sh
+      - ./schema-registry/avro:/schemas/avro
+    depends_on:
+      schema-registry:
+        condition: service_healthy
+    entrypoint: ["/scripts/entrypoint.sh"]
+    networks:
+      - kafka-net
   
   spark:
     image: docker.io/bitnami/spark:3.5
