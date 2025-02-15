@@ -102,7 +102,7 @@ services:
       interval: 30s
       timeout: 10s
       retries: 5
-      
+
   schema-registry-init:
     image: confluentinc/cp-kafka:latest
     volumes:
@@ -114,6 +114,7 @@ services:
     entrypoint: ["/scripts/entrypoint.sh"]
     networks:
       - kafka-net
+I
   
   spark:
     image: docker.io/bitnami/spark:3.5
