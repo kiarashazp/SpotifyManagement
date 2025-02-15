@@ -8,8 +8,9 @@ services:
       - SASL_MECHANISM=''
       - CLIENT_DNS_LOOKUP=use_all_dns_ips
       - SESSION_TIMEOUT_MS=45000
-      - KEY_SERIALIZER=org.apache.kafka.common.serialization.ByteArraySerializer
-      - VALUE_SERIALIZER=org.apache.kafka.common.serialization.ByteArraySerializer
+      - KEY_SERIALIZER=io.confluent.kafka.serializers.KafkaAvroSerializer
+      - VALUE_SERIALIZER=io.confluent.kafka.serializers.KafkaAvroSerializer
+      - SCHEMA_REGISTRY_URL=http://schema-registry:8085
       - ACKS=all
     ports:
       - "8083:8083"
