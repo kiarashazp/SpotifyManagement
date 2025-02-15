@@ -1,0 +1,23 @@
+{
+  "type": "record",
+  "name": "StatusChangeEvent",
+  "fields": [
+    {"name": "ts", "type": "long", "doc": "Timestamp of the event"},
+    {"name": "sessionId", "type": "int", "doc": "Session identifier"},
+    {"name": "auth", "type": "string", "doc": "Authentication status"},
+    {"name": "level", "type": "string", "doc": "Subscription level"},
+    {"name": "itemInSession", "type": "int", "doc": "Item count within the session"},
+    {"name": "city", "type": "string", "doc": "City of the user"},
+    {"name": "zip", "type": "string", "doc": "ZIP code of the user"},
+    {"name": "state", "type": "string", "doc": "State of the user"},
+    {"name": "userAgent", "type": "string", "doc": "User agent string"},
+    {"name": "lon", "type": "double", "doc": "Longitude coordinate"},
+    {"name": "lat", "type": "double", "doc": "Latitude coordinate"},
+    {"name": "userId", "type": "int", "doc": "User identifier"},
+    {"name": "lastName", "type": "string", "doc": "Last name of the user"},
+    {"name": "firstName", "type": "string", "doc": "First name of the user"},
+    {"name": "gender", "type": "string", "doc": "Gender of the user"},
+    {"name": "registration", "type": "long", "doc": "Registration timestamp"}
+  ]
+}
+

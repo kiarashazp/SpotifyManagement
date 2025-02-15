@@ -1,0 +1,29 @@
+{
+  "type": "record",
+  "name": "PageViewEvent",
+  "fields": [
+    {"name": "ts", "type": "long", "doc": "Timestamp of the event"},
+    {"name": "sessionId", "type": "int", "doc": "Session identifier"},
+    {"name": "page", "type": "string", "doc": "Page viewed"},
+    {"name": "auth", "type": "string", "doc": "Authentication status"},
+    {"name": "method", "type": "string", "doc": "HTTP method"},
+    {"name": "status", "type": "int", "doc": "HTTP status code"},
+    {"name": "level", "type": "string", "doc": "Subscription level"},
+    {"name": "itemInSession", "type": "int", "doc": "Item count within the session"},
+    {"name": "city", "type": "string", "doc": "City of the user"},
+    {"name": "zip", "type": "string", "doc": "ZIP code of the user"},
+    {"name": "state", "type": "string", "doc": "State of the user"},
+    {"name": "userAgent", "type": "string", "doc": "User agent string"},
+    {"name": "lon", "type": "double", "doc": "Longitude coordinate"},
+    {"name": "lat", "type": "double", "doc": "Latitude coordinate"},
+    {"name": "userId", "type": ["null", "int"], "doc": "User identifier", "default": null},
+    {"name": "lastName", "type": ["null", "string"], "doc": "Last name of the user", "default": null},
+    {"name": "firstName", "type": ["null", "string"], "doc": "First name of the user", "default": null},
+    {"name": "gender", "type": ["null", "string"], "doc": "Gender of the user", "default": null},
+    {"name": "registration", "type": ["null", "long"], "doc": "Registration timestamp", "default": null},
+    {"name": "artist", "type": ["null", "string"], "doc": "Artist of the song", "default": null},
+    {"name": "song", "type": ["null", "string"], "doc": "Title of the song", "default": null},
+    {"name": "duration", "type": ["null", "double"], "doc": "Duration of the song in seconds", "default": null}
+  ]
+}
+
