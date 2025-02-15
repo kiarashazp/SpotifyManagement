@@ -1,6 +1,6 @@
 {
   "type": "record",
-  "name": "ListenEvent",
+  "name": "listen_events",
   "fields": [
     {"name": "artist", "type": "string", "doc": "Name of the artist"},
     {"name": "song", "type": "string", "doc": "Title of the song"},

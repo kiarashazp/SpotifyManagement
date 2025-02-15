@@ -1,6 +1,6 @@
 {
   "type": "record",
-  "name": "PageViewEvent",
+  "name": "page_view_events",
   "fields": [
     {"name": "ts", "type": "long", "doc": "Timestamp of the event"},
     {"name": "sessionId", "type": "int", "doc": "Session identifier"},

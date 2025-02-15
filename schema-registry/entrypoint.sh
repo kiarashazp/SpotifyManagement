@@ -26,7 +26,7 @@ while ! wget -qO- http://schema-registry:8085/; do
 done
 
 # Register schemas with corrected filenames
-register_schema /schemas/avro/auth_events_schema.avsc AuthEvent
-register_schema /schemas/avro/listen_events_schema.avsc ListenEvent
-register_schema /schemas/avro/page_view_events_schema.avsc PageViewEvent
-register_schema /schemas/avro/status_change_events_schema.avsc StatusChangeEvent
+register_schema /schemas/avro/auth_events_schema.avsc auth_events
+register_schema /schemas/avro/listen_events_schema.avsc listen_events
+register_schema /schemas/avro/page_view_events_schema.avsc page_view_events
+register_schema /schemas/avro/status_change_events_schema.avsc status_change_events
