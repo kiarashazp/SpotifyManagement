@@ -8,7 +8,7 @@ register_schema() {
 
   echo "Registering schema for ${subject_name}..."
   wget --quiet --method=POST --header=Content-Type:application/vnd.schemaregistry.v1+json \
-  --body-data="{\"schema\": ${schema}}" \
+  --body-data="{\"schema\": \"${schema//\"/\\\"}\"}" \
   --output-document=- http://schema-registry:8085/subjects/${subject_name}/versions
 }
 
@@ -19,9 +19,10 @@ while ! wget -qO- http://schema-registry:8085/; do
 done
 
 # Register schemas
-register_schema /schema-registry/avro/auth-event-schema.avsc auth_events
-register_schema /schema-registry/avro/listen-event-schema.avsc listen_events
-register_schema /schema-registry/avro/page-view-event-schema.avsc page_view_events
-register_schema /schema-registry/avro/status-change-event-schema.avsc status_change_events
+register_schema /schemas/avro/auth-event-schema.avsc auth_events
+register_schema /schemas/avro/listen-event-schema.avsc listen_events
+register_schema /schemas/avro/page-view-event-schema.avsc page_view_events
+register_schema /schemas/avro/status-change-event-schema.avsc status_change_events
+
 
 
