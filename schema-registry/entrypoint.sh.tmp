@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Check if the Schema Registry is up
+echo "Checking if Schema Registry is up..."
+wget -qO- http://schema-registry:8085/
+
+# Check the exit status of the wget command
+if [[ $? -ne 0 ]]; then
+  echo "Schema Registry is not up. Exiting."
+  exit 1
+else
+  echo "Schema Registry is up. Exiting."
+  exit 0
+fi

@@ -15,7 +15,7 @@ services:
     ports:
       - "8083:8083"
     volumes:
-      - ../eventsim/examples:/eventsim/examples 
+      - ../eventsim/examples:/eventsim/examples
     working_dir: /eventsim
     command: ./bin/eventsim -c configs/Guitar-config.json --continuous --from 200 --nusers 2000 -k 1
     depends_on:
@@ -105,17 +105,17 @@ services:
       retries: 5
 
   schema-registry-init:
-    image: confluentinc/cp-kafka:latest
+    image: confluentinc/cp-schema-registry:latest
     volumes:
       - ../schema-registry/entrypoint.sh:/scripts/entrypoint.sh
-      - ../schema-registry/avro:/schemas/avro
+      - ../schema-registry/json:/schemas/json
     depends_on:
       schema-registry:
         condition: service_healthy
     entrypoint: ["/scripts/entrypoint.sh"]
     networks:
       - kafka-net
-  
+
   spark:
     image: docker.io/bitnami/spark:3.5
     environment:
@@ -179,7 +179,7 @@ services:
       - ../hadoop/hadoop.env
     networks:
       - hbase
-  
+
   resourcemanager:
     image: bde2020/hadoop-resourcemanager:2.0.0-hadoop3.2.1-java8
     container_name: resourcemanager
@@ -201,7 +201,7 @@ services:
       - ../hadoop/hadoop.env
     networks:
       - hbase
-  
+
   historyserver:
     image: bde2020/hadoop-historyserver:2.0.0-hadoop3.2.1-java8
     container_name: historyserver
@@ -214,7 +214,7 @@ services:
       - ../hadoop/hadoop.env
     networks:
       - hbase
-  
+
 volumes:
   kafka-data:
   hadoop_namenode:
@@ -226,4 +226,3 @@ networks:
     driver: bridge
   hbase:
     driver: bridge
-
