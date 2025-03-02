@@ -1,0 +1,23 @@
+global:
+  # Global configuration options (e.g., resolve_timeout, smtp settings, etc.)
+  resolve_timeout: 5m
+
+route:
+  # Default route that matches all alerts
+  receiver: 'Default'
+  group_by: ['alertname', 'job']
+  group_wait: 30s
+  group_interval: 5m
+  repeat_interval: 3h
+
+receivers:
+- name: 'Default'
+  telegram_configs:
+  - bot_token: '7601984424:AAH6M5MK7q3eR0MEX-LUn2HmXnSWw3GaAgU'
+    api_url: https://api.telegram.org
+    chat_id: -1002349805226
+    parse_mode: 'HTML'
+    message: '{{ template "telegram.message" . }}'
+
+templates:
+- './telegram.tmpl'  # Path to your custom Telegram template file
