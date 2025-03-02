@@ -1,5 +1,4 @@
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import col
 
 # Initialize Spark session
 spark = SparkSession.builder \
