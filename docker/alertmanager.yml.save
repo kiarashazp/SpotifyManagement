@@ -15,10 +15,10 @@ receivers:
   telegram_configs:
   - bot_token: '7601984424:AAH6M5MK7q3eR0MEX-LUn2HmXnSWw3GaAgU'
     api_url: https://api.telegram.org
-    chat_id: -1002349805226
+    chat_id: <chat_id>  # Replace with your Telegram chat ID
+    message_thread_id: <message_thread_id>  # Optional: Replace with your message thread ID for supergroups
     parse_mode: 'HTML'
-    # message: 'Test alert: {{ .CommonLabels.alertname }}'  # Simple test message
     message: '{{ template "telegram.message" . }}'
 
 templates:
-- './telegram.tmpl'  # Path to your custom Telegram template file
+- '../message_templates/telegram.tmpl'  # Path to your custom Telegram template file

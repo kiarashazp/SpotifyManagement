@@ -1,0 +1,40 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']  # Scrape Prometheus itself
+
+  - job_name: 'kafka-exporter'
+    static_configs:
+      - targets: ['kafka-exporter:9308']  # Kafka Exporter
+
+  - job_name: 'spark-master'
+    static_configs:
+      - targets: ['spark.kafka-net:7072']  # Spark Master JMX Exporter
+
+  - job_name: 'spark-worker'
+    static_configs:
+      - targets: ['spark-worker.kafka-net:7073']  # Spark Worker JMX Exporter
+
+  - job_name: 'hdfs-namenode'
+    static_configs:
+      - targets: ['namenode:7074']  # NameNode JMX Exporter
+
+  - job_name: 'hdfs-datanode'
+    static_configs:
+      - targets: ['datanode:7075']  # DataNode JMX Exporter
+
+  - job_name: 'hdfs-resourcemanager'
+    static_configs:
+      - targets: ['resourcemanager:7076']  # ResourceManager JMX Exporter
+
+  - job_name: 'hdfs-nodemanager'
+    static_configs:
+      - targets: ['nodemanager1:7077']  # NodeManager JMX Exporter
+
+  - job_name: 'hdfs-historyserver'
+    static_configs:
+      - targets: ['historyserver:7078']  # HistoryServer JMX Exporter
