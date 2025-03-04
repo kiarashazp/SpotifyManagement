@@ -125,8 +125,9 @@ services:
   schema-registry-init:
     image: confluentinc/cp-schema-registry:latest
     volumes:
-      - ../schema-registry/entrypoint.sh:/scripts/entrypoint.sh
-      - ../schema-registry/json:/schemas/json
+      - ./sr-entrypoint.sh:/scripts/entrypoint.sh
+      - /schema-registry/json:/schemas/json
+    restart: on-failure
     depends_on:
       schema-registry:
         condition: service_healthy
@@ -184,6 +185,27 @@ services:
           - spark-worker
     command: /opt/bitnami/spark/sbin/start-worker.sh spark://spark:7077
 
+  spark-thrift:
+    image: docker.io/bitnami/spark:3.5
+    environment:
+      - SPARK_MODE=master
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+      - SPARK_SSL_ENABLED=no
+      - SPARK_USER=spark
+    ports:
+      - '10000:10000'  # Thrift server port
+    volumes:
+      - ./spark-thrift-entrypoint.sh:/spark-thrift-entrypoint.sh
+    depends_on:
+      - spark
+    networks:
+      data-highway:
+        aliases:
+          - spark-thrift
+    entrypoint: ["/bin/bash", "/spark-thrift-entrypoint.sh"]
+
   namenode:
     image: bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8
     container_name: namenode
@@ -199,7 +221,7 @@ services:
       - ../jmx-exporters/hdfs-jmx-exporter-config.yml:/opt/hadoop/conf/jmx_exporter.yml
     environment:
       - CLUSTER_NAME=test
-      - HADOOP_OPTS=-javaagent:/opt/hadoop/jmx_prometheus_javaagent.jar=7074:/opt/hadoop/conf/jmx_exporter.yml
+      # - HADOOP_OPTS=-javaagent:/opt/hadoop/jmx_prometheus_javaagent.jar=7074:/opt/hadoop/conf/jmx_exporter.yml
     env_file:
       - ../hadoop/hadoop.env
     networks:
@@ -277,27 +299,255 @@ services:
         aliases:
           - nodemanager
 
-  historyserver:
-    image: bde2020/hadoop-historyserver:2.0.0-hadoop3.2.1-java8
-    container_name: historyserver
+  # historyserver:
+  #   image: bde2020/hadoop-historyserver:2.0.0-hadoop3.2.1-java8
+  #   container_name: historyserver
+  #   restart: always
+  #   environment:
+  #     - SERVICE_PRECONDITION=namenode:9000 namenode:9870 datanode:9864 resourcemanager:8088
+  #     - HADOOP_OPTS=-javaagent:/opt/hadoop/jmx_prometheus_javaagent.jar=7078:/opt/hadoop/conf/jmx_exporter.yml
+  #   ports:
+  #     - 8188:8188
+  #     - 7078:7078  # JMX Exporter port
+  #   volumes:
+  #     - ../hadoop/hadoop_historyserver:/hadoop/yarn/timeline
+  #     - ../jmx-exporters/jmx_prometheus_javaagent-1.0.1.jar:/opt/hadoop/jmx_prometheus_javaagent.jar
+  #     - ../jmx-exporters/hdfs-jmx-exporter-config.yml:/opt/hadoop/conf/jmx_exporter.yml
+  #   env_file:
+  #     - ../hadoop/hadoop.env
+  #   networks:
+  #     data-highway:
+  #       aliases:
+  #         - historyserver
+  # hive-metastore-postgresql:
+  #   image: postgres:13
+  #   container_name: hive-metastore-db
+  #   restart: always
+  #   environment:
+  #     - POSTGRES_USER=hive
+  #     - POSTGRES_PASSWORD=hive
+  #     - POSTGRES_DB=metastore
+  #   ports:
+  #     - "5432:5432"
+  #   volumes:
+  #     - ../hive/postgresql:/var/lib/postgresql/data
+  #   networks:
+  #     - data-highway
+  #   healthcheck:
+  #     test: ["CMD-SHELL", "pg_isready -U hive -d metastore"]
+  #     interval: 10s
+  #     timeout: 5s
+  #     retries: 5
+
+  # hive-schema-init:
+  #   image: bde2020/hive:2.3.2-postgresql-metastore
+  #   container_name: hive-schema-init
+  #   restart: on-failure
+  #   depends_on:
+  #     hive-metastore-postgresql:
+  #       condition: service_healthy
+  #   environment:
+  #     - HIVE_HOME=/opt/hive
+  #     - HADOOP_HOME=/opt/hadoop
+  #     - HIVE_CORE_CONF_javax_jdo_option_ConnectionURL=jdbc:postgresql://hive-metastore-postgresql:5432/metastore
+  #     - HIVE_CORE_CONF_javax_jdo_option_ConnectionDriverName=org.postgresql.Driver
+  #     - HIVE_CORE_CONF_javax_jdo_option_ConnectionUserName=hive
+  #     - HIVE_CORE_CONF_javax_jdo_option_ConnectionPassword=hive
+  #     - HIVE_CORE_CONF_datanucleus_autoCreateSchema=true
+  #     - HIVE_CORE_CONF_datanucleus_schema_autoCreateAll=true
+  #     - HIVE_CORE_CONF_hive_metastore_schema_verification=false
+  #   networks:
+  #     - data-highway
+  #   command:
+  #     - /bin/bash
+  #     - -c
+  #     - |
+  #       export HIVE_HOME=/opt/hive
+  #       export HADOOP_HOME=/opt/hadoop
+  #       echo "HIVE_HOME is set to: $HIVE_HOME"
+  #       echo "Waiting 10s for PostgreSQL to be properly initialized..."
+  #       sleep 10
+        
+  #       echo "Checking PostgreSQL connection..."
+  #       pg_isready -h hive-metastore-postgresql -U hive -d metastore
+        
+  #       echo "Executing schema initialization..."
+  #       $HIVE_HOME/bin/schematool -dbType postgres -initSchema --verbose
+        
+  #       echo "Schema initialization completed."
+  #       echo "Container will exit in 5 seconds..."
+  #       sleep 5
+
+  # hive-metastore:
+  #   image: bde2020/hive:2.3.2-postgresql-metastore
+  #   container_name: hive-metastore
+  #   restart: on-failure
+  #   depends_on:
+  #     namenode:
+  #       condition: service_healthy
+  #     datanode:
+  #       condition: service_started
+  #     hive-metastore-postgresql:
+  #       condition: service_healthy
+  #     hive-schema-init:
+  #       condition: service_completed_successfully
+  #   environment:
+  #     - SERVICE_PRECONDITION=namenode:9870 datanode:9864 hive-metastore-postgresql:5432
+  #     - HIVE_HOME=/opt/hive
+  #     - HADOOP_HOME=/opt/hadoop
+  #     - CORE_CONF_fs_defaultFS=hdfs://namenode:9000
+  #     - HIVE_CORE_CONF_javax_jdo_option_ConnectionURL=jdbc:postgresql://hive-metastore-postgresql:5432/metastore
+  #     - HIVE_CORE_CONF_javax_jdo_option_ConnectionDriverName=org.postgresql.Driver
+  #     - HIVE_CORE_CONF_javax_jdo_option_ConnectionUserName=hive
+  #     - HIVE_CORE_CONF_javax_jdo_option_ConnectionPassword=hive
+  #     - HIVE_CORE_CONF_datanucleus_autoCreateSchema=true
+  #     - HIVE_CORE_CONF_datanucleus_schema_autoCreateAll=true
+  #     - HIVE_CORE_CONF_hive_metastore_schema_verification=false
+  #     - HIVE_CORE_CONF_hive_metastore_uris=thrift://hive-metastore:9083
+  #     - HIVE_SITE_CONF_datanucleus_schema_autoCreateAll=true
+  #     - HIVE_SITE_CONF_hive_metastore_schema_verification=false
+  #     - HIVE_SITE_CONF_hive_metastore_warehouse_dir=/user/hive/warehouse
+  #   ports:
+  #     - "9083:9083"
+  #   networks:
+  #     - data-highway
+  #   command: 
+  #     - /bin/bash
+  #     - -c
+  #     - |
+  #       export HIVE_HOME=/opt/hive
+  #       export HADOOP_HOME=/opt/hadoop
+  #       echo "HIVE_HOME is set to: $HIVE_HOME"
+  #       echo "Starting Hive Metastore service..."
+  #       $HIVE_HOME/bin/hive --service metastore
+  # hive-server:
+  #   image: bde2020/hive:2.3.2-postgresql-metastore
+  #   container_name: hive-server
+  #   depends_on:
+  #     - hive-metastore
+  #   environment:
+  #     SERVICE_PRECONDITION: "hive-metastore:9083"
+  #     HIVE_CORE_CONF_hive_metastore_uris: "thrift://hive-metastore:9083"
+  #   ports:
+  #     - "10000:10000"
+  #     - "10002:10002"
+  #   networks:
+  #     - data-highway
+  #   command: /opt/hive/bin/hive --service hiveserver2
+
+
+  # Add ClickHouse
+  clickhouse-server:
+    image: clickhouse/clickhouse-server:latest
+    container_name: clickhouse-server
+    restart: always
+    ports:
+      - "8123:8123"  # HTTP port
+      - "9001:9000"  # Native port
+    volumes:
+      - ../clickhouse/data:/var/lib/clickhouse
+      # Remove the custom config files initially to use default configuration
+      # - ../clickhouse/config/config.xml:/etc/clickhouse-server/config.xml
+      # - ../clickhouse/config/users.xml:/etc/clickhouse-server/users.xml
+    environment:
+      # Add environment variables for basic configuration
+      - CLICKHOUSE_DB=spotify
+      - CLICKHOUSE_USER=default
+      - CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT=1
+    ulimits:
+      nofile:
+        soft: 262144
+        hard: 262144
+    networks:
+      - data-highway
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8123/ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+
+  # Add dbt with HDFS support
+  dbt:
+    image: fishtownanalytics/dbt:1.0.0
+    container_name: dbt
+    volumes:
+      - ../dbt:/usr/app
+      - ../hadoop/conf:/etc/hadoop/conf
+      - ./dbt-entrypoint.sh:/entrypoint.sh
+      # Add direct access to Hadoop configurations
+      - ../hadoop/hadoop.env:/etc/hadoop/hadoop.env
+    working_dir: /usr/app
+    depends_on:
+      - clickhouse-server
+      - spark
+      - spark-thrift
+      - namenode
+      - datanode
+      - resourcemanager
+    networks:
+      - data-highway
+    environment:
+      - DBT_PROFILES_DIR=/usr/app/profiles
+      - HADOOP_CONF_DIR=/etc/hadoop/conf
+      - HADOOP_USER_NAME=root
+      - SPARK_HOME=/usr/local/spark
+      - PYTHONPATH=/usr/local/spark/python:/usr/local/spark/python/lib/py4j-0.10.9-src.zip
+    entrypoint: ["/bin/bash", "/entrypoint.sh"]
+    # Keep the container running
+    tty: true
+    stdin_open: true
+
+  postgres-metabase:
+    image: postgres:13
+    container_name: postgres-metabase
+    hostname: postgres
     restart: always
     environment:
-      - SERVICE_PRECONDITION=namenode:9000 namenode:9870 datanode:9864 resourcemanager:8088
-      - HADOOP_OPTS=-javaagent:/opt/hadoop/jmx_prometheus_javaagent.jar=7078:/opt/hadoop/conf/jmx_exporter.yml
-    ports:
-      - 8188:8188
-      - 7078:7078  # JMX Exporter port
+      - POSTGRES_USER=metabase
+      - POSTGRES_PASSWORD=mysecretpassword
+      - POSTGRES_DB=metabaseappdb
     volumes:
-      - ../hadoop/hadoop_historyserver:/hadoop/yarn/timeline
-      - ../jmx-exporters/jmx_prometheus_javaagent-1.0.1.jar:/opt/hadoop/jmx_prometheus_javaagent.jar
-      - ../jmx-exporters/hdfs-jmx-exporter-config.yml:/opt/hadoop/conf/jmx_exporter.yml
-    env_file:
-      - ../hadoop/hadoop.env
+      - ../postgres-metabase-data:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"  # Using 5433 externally to avoid conflict with Hive's PostgreSQL
     networks:
-      data-highway:
-        aliases:
-          - historyserver
+      - data-highway
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U metabase"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
+  # Metabase with ClickHouse driver
+  metabase:
+    image: lucasluanp/metabase-with-clickhouse
+    container_name: metabase
+    hostname: metabase
+    volumes:
+      - /dev/urandom:/dev/random:ro
+    ports:
+      - 3001:3001
+    environment:
+      MB_DB_TYPE: postgres
+      MB_DB_DBNAME: metabaseappdb
+      MB_DB_PORT: 5432
+      MB_DB_USER: metabase
+      MB_DB_PASS: mysecretpassword
+      MB_DB_HOST: postgres-metabase
+      MB_JETTY_PORT: 3001
+    networks:
+      - data-highway
+    depends_on:
+      postgres-metabase:
+        condition: service_healthy
+      clickhouse-server:
+        condition: service_started
+    healthcheck:
+      test: curl --fail -I http://localhost:3001/api/health || exit 1
+      interval: 15s
+      timeout: 5s
+      retries: 5
   prometheus:
     image: prom/prometheus:latest
     container_name: prometheus
@@ -342,6 +592,10 @@ volumes:
   hadoop_namenode:
   hadoop_datanode:
   hadoop_historyserver:
+  postgres-metabase-data:
+  metabase-data:
+  clickhouse-data:
+  # hive-postgresql-data:
 
 networks:
   data-highway:
