@@ -1,0 +1,15 @@
+spotify_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: spark
+      method: thrift
+      host: docker-spark-thrift-1
+      port: 10000
+      user: spark
+      schema: spotify_analytics
+      connect_timeout: 60
+      connect_retries: 5
+      threads: 4
+
+

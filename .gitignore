@@ -108,3 +108,10 @@ Pipfile.lock
 
 # Poetry
 poetry.lock
+hadoop/hadoop_datanode/
+hadoop/hadoop_historyserver/
+hadoop/hadoop_namenode/
+hive/postgresql
+kafka-logs/
+postgres-metabase-data/
+data
