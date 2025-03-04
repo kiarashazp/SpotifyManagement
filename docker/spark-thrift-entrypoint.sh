@@ -22,3 +22,7 @@ echo "Spark Master is ready, starting Thrift server..."
 # Keep the container running
 echo "Thrift server started, keeping container alive..."
 tail -f /opt/bitnami/spark/logs/spark-*-org.apache.spark.sql.hive.thriftserver.HiveThriftServer2*.out
+spark-submit \
+  --packages org.apache.spark:spark-hive-thriftserver_2.12:3.5.0 \
+  --class org.apache.spark.sql.hive.thriftserver.HiveThriftServer2
+

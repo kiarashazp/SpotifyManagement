@@ -149,6 +149,7 @@ services:
       - '8081:8081'  # Spark Master UI
       # - '7077:7077'  # Spark Master internal communication
       - '7072:7072'  # JMX Exporter port
+      - '10000:10000'
     volumes:
       - ../jmx-exporters/spark-jmx-exporter-config.yml:/opt/bitnami/spark/conf/jmx_exporter.yml
       - ../jmx-exporters/jmx_prometheus_javaagent-1.0.1.jar:/opt/bitnami/spark/jars/jmx_prometheus_javaagent.jar
@@ -156,8 +157,12 @@ services:
       data-highway:
         aliases:
           - spark
-    command: /opt/bitnami/spark/sbin/start-master.sh
-
+    command: >
+      /opt/bitnami/spark/sbin/start-master.sh && 
+      /opt/bitnami/spark/sbin/start-thriftserver.sh 
+      --master spark://spark:7077 
+      --hiveconf hive.metastore.uris=thrift://hive-metastore:9083 
+      --hiveconf hive.server2.thrift.bind.host=0.0.0.0
   spark-worker:
     image: docker.io/bitnami/spark:3.5
     environment:
@@ -185,27 +190,36 @@ services:
           - spark-worker
     command: /opt/bitnami/spark/sbin/start-worker.sh spark://spark:7077
 
-  spark-thrift:
-    image: docker.io/bitnami/spark:3.5
-    environment:
-      - SPARK_MODE=master
-      - SPARK_RPC_AUTHENTICATION_ENABLED=no
-      - SPARK_RPC_ENCRYPTION_ENABLED=no
-      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
-      - SPARK_SSL_ENABLED=no
-      - SPARK_USER=spark
-    ports:
-      - '10000:10000'  # Thrift server port
-    volumes:
-      - ./spark-thrift-entrypoint.sh:/spark-thrift-entrypoint.sh
-    depends_on:
-      - spark
-    networks:
-      data-highway:
-        aliases:
-          - spark-thrift
-    entrypoint: ["/bin/bash", "/spark-thrift-entrypoint.sh"]
-
+      #  spark-thrift:
+      #    image: docker.io/bitnami/spark:3.5
+      #    environment:
+      #      - SPARK_MODE=master
+      #      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      #      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      #      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+      #      - SPARK_SSL_ENABLED=no
+      #      - SPARK_USER=spark
+      #      - IVY_HOME=/opt/bitnami/spark/.ivy2  # <-- Add this
+      #      - SPARK_OPTS="--packages org.apache.spark:spark-hive_2.12:3.5.0 --conf spark.sql.hive.metastore.uris=thrift://hive-metastore:9083"
+      #    command: /opt/bitnami/spark/sbin/start-thriftserver.sh
+      #      --master spark://spark:7077
+      #      --conf spark.sql.hive.metastore.uris=thrift://hive-metastore:9083
+      #      --hiveconf hive.server2.thrift.port=10000
+      #      --hiveconf hive.server2.thrift.bind.host=0.0.0.0
+      #    ports:
+      #      - '10000:10000'  # Thrift server port
+      #    volumes:
+      #      - ./spark-thrift-entrypoint.sh:/spark-thrift-entrypoint.sh
+      #      - ../spark-ivy-cache:/opt/bitnami/spark/.ivy2
+      #      - ./spark-hive_2.12-3.5.0.jar:/opt/bitnami/spark/jars/spark-hive_2.12-3.5.0.jar
+      #    depends_on:
+      #      - spark
+      #    networks:
+      #      data-highway:
+      #        aliases:
+      #          - spark-thrift
+      #    entrypoint: ["/bin/bash", "/spark-thrift-entrypoint.sh"]
+      #
   namenode:
     image: bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8
     container_name: namenode
@@ -482,7 +496,7 @@ services:
     depends_on:
       - clickhouse-server
       - spark
-      - spark-thrift
+        #- spark-thrift
       - namenode
       - datanode
       - resourcemanager
