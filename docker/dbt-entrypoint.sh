@@ -3,7 +3,7 @@ set -e
 
 # Install additional dependencies for Spark
 echo "Installing dbt-spark and dependencies..."
-pip install dbt-spark[thrift]==1.0.0 pyhdfs
+pip install dbt-spark[session]==1.0.0 pyhdfs
 
 # Install PySpark for Python operations
 echo "Installing PySpark..."

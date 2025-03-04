@@ -51,4 +51,11 @@ For Spark Connectivity
 spark-submit \
   --packages org.apache.spark:spark-hive-thriftserver_2.12:3.5.0 \
   --class org.apache.spark.sql.hive.thriftserver.HiveThriftServer2
+
+docker exec -it --user root dbt bash -c "apt-get update && apt-get install -y libsasl2-dev python-dev libldap2-dev libssl-dev"
+
+docker exec -it dbt bash -c "pip install thrift sasl thrift_sasl pyhive"
+
+
+
 ```

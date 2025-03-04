@@ -4,12 +4,10 @@ spotify_analytics:
     dev:
       type: spark
       method: thrift
-      host: docker-spark-thrift-1
-      port: 10000
-      user: spark
-      schema: spotify_analytics
+      host: hive-server
+      port: 10003
+      user: hive
+      schema: default
       connect_timeout: 60
       connect_retries: 5
       threads: 4
-
-

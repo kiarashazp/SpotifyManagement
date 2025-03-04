@@ -11,7 +11,7 @@ services:
       - KEY_SERIALIZER=org.apache.kafka.common.serialization.ByteArraySerializer
       - VALUE_SERIALIZER=org.apache.kafka.common.serialization.ByteArraySerializer
       - SCHEMA_REGISTRY_URL=http://schema-registry:8085
-      - ACKS=all
+      - ACKS=all 
     ports:
       - "8083:8083"
     volumes:
@@ -299,141 +299,142 @@ services:
         aliases:
           - nodemanager
 
-  # historyserver:
-  #   image: bde2020/hadoop-historyserver:2.0.0-hadoop3.2.1-java8
-  #   container_name: historyserver
-  #   restart: always
-  #   environment:
-  #     - SERVICE_PRECONDITION=namenode:9000 namenode:9870 datanode:9864 resourcemanager:8088
-  #     - HADOOP_OPTS=-javaagent:/opt/hadoop/jmx_prometheus_javaagent.jar=7078:/opt/hadoop/conf/jmx_exporter.yml
-  #   ports:
-  #     - 8188:8188
-  #     - 7078:7078  # JMX Exporter port
-  #   volumes:
-  #     - ../hadoop/hadoop_historyserver:/hadoop/yarn/timeline
-  #     - ../jmx-exporters/jmx_prometheus_javaagent-1.0.1.jar:/opt/hadoop/jmx_prometheus_javaagent.jar
-  #     - ../jmx-exporters/hdfs-jmx-exporter-config.yml:/opt/hadoop/conf/jmx_exporter.yml
-  #   env_file:
-  #     - ../hadoop/hadoop.env
-  #   networks:
-  #     data-highway:
-  #       aliases:
-  #         - historyserver
-  # hive-metastore-postgresql:
-  #   image: postgres:13
-  #   container_name: hive-metastore-db
-  #   restart: always
-  #   environment:
-  #     - POSTGRES_USER=hive
-  #     - POSTGRES_PASSWORD=hive
-  #     - POSTGRES_DB=metastore
-  #   ports:
-  #     - "5432:5432"
-  #   volumes:
-  #     - ../hive/postgresql:/var/lib/postgresql/data
-  #   networks:
-  #     - data-highway
-  #   healthcheck:
-  #     test: ["CMD-SHELL", "pg_isready -U hive -d metastore"]
-  #     interval: 10s
-  #     timeout: 5s
-  #     retries: 5
+  historyserver:
+    image: bde2020/hadoop-historyserver:2.0.0-hadoop3.2.1-java8
+    container_name: historyserver
+    restart: always
+    environment:
+      - SERVICE_PRECONDITION=namenode:9000 namenode:9870 datanode:9864 resourcemanager:8088
+      - HADOOP_OPTS=-javaagent:/opt/hadoop/jmx_prometheus_javaagent.jar=7078:/opt/hadoop/conf/jmx_exporter.yml
+    ports:
+      - 8188:8188
+      - 7078:7078  # JMX Exporter port
+    volumes:
+      - ../hadoop/hadoop_historyserver:/hadoop/yarn/timeline
+      - ../jmx-exporters/jmx_prometheus_javaagent-1.0.1.jar:/opt/hadoop/jmx_prometheus_javaagent.jar
+      - ../jmx-exporters/hdfs-jmx-exporter-config.yml:/opt/hadoop/conf/jmx_exporter.yml
+    env_file:
+      - ../hadoop/hadoop.env
+    networks:
+      data-highway:
+        aliases:
+          - historyserver
 
-  # hive-schema-init:
-  #   image: bde2020/hive:2.3.2-postgresql-metastore
-  #   container_name: hive-schema-init
-  #   restart: on-failure
-  #   depends_on:
-  #     hive-metastore-postgresql:
-  #       condition: service_healthy
-  #   environment:
-  #     - HIVE_HOME=/opt/hive
-  #     - HADOOP_HOME=/opt/hadoop
-  #     - HIVE_CORE_CONF_javax_jdo_option_ConnectionURL=jdbc:postgresql://hive-metastore-postgresql:5432/metastore
-  #     - HIVE_CORE_CONF_javax_jdo_option_ConnectionDriverName=org.postgresql.Driver
-  #     - HIVE_CORE_CONF_javax_jdo_option_ConnectionUserName=hive
-  #     - HIVE_CORE_CONF_javax_jdo_option_ConnectionPassword=hive
-  #     - HIVE_CORE_CONF_datanucleus_autoCreateSchema=true
-  #     - HIVE_CORE_CONF_datanucleus_schema_autoCreateAll=true
-  #     - HIVE_CORE_CONF_hive_metastore_schema_verification=false
-  #   networks:
-  #     - data-highway
-  #   command:
-  #     - /bin/bash
-  #     - -c
-  #     - |
-  #       export HIVE_HOME=/opt/hive
-  #       export HADOOP_HOME=/opt/hadoop
-  #       echo "HIVE_HOME is set to: $HIVE_HOME"
-  #       echo "Waiting 10s for PostgreSQL to be properly initialized..."
-  #       sleep 10
-        
-  #       echo "Checking PostgreSQL connection..."
-  #       pg_isready -h hive-metastore-postgresql -U hive -d metastore
-        
-  #       echo "Executing schema initialization..."
-  #       $HIVE_HOME/bin/schematool -dbType postgres -initSchema --verbose
-        
-  #       echo "Schema initialization completed."
-  #       echo "Container will exit in 5 seconds..."
-  #       sleep 5
+  hive-metastore-postgresql:
+    image: postgres:13
+    container_name: hive-metastore-db
+    restart: always
+    environment:
+      - POSTGRES_USER=hive
+      - POSTGRES_PASSWORD=hive
+      - POSTGRES_DB=metastore
+    ports:
+      - "5432:5432"
+    volumes:
+      - ../hive/postgresql:/var/lib/postgresql/data
+    networks:
+      - data-highway
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U hive -d metastore"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
-  # hive-metastore:
-  #   image: bde2020/hive:2.3.2-postgresql-metastore
-  #   container_name: hive-metastore
-  #   restart: on-failure
-  #   depends_on:
-  #     namenode:
-  #       condition: service_healthy
-  #     datanode:
-  #       condition: service_started
-  #     hive-metastore-postgresql:
-  #       condition: service_healthy
-  #     hive-schema-init:
-  #       condition: service_completed_successfully
-  #   environment:
-  #     - SERVICE_PRECONDITION=namenode:9870 datanode:9864 hive-metastore-postgresql:5432
-  #     - HIVE_HOME=/opt/hive
-  #     - HADOOP_HOME=/opt/hadoop
-  #     - CORE_CONF_fs_defaultFS=hdfs://namenode:9000
-  #     - HIVE_CORE_CONF_javax_jdo_option_ConnectionURL=jdbc:postgresql://hive-metastore-postgresql:5432/metastore
-  #     - HIVE_CORE_CONF_javax_jdo_option_ConnectionDriverName=org.postgresql.Driver
-  #     - HIVE_CORE_CONF_javax_jdo_option_ConnectionUserName=hive
-  #     - HIVE_CORE_CONF_javax_jdo_option_ConnectionPassword=hive
-  #     - HIVE_CORE_CONF_datanucleus_autoCreateSchema=true
-  #     - HIVE_CORE_CONF_datanucleus_schema_autoCreateAll=true
-  #     - HIVE_CORE_CONF_hive_metastore_schema_verification=false
-  #     - HIVE_CORE_CONF_hive_metastore_uris=thrift://hive-metastore:9083
-  #     - HIVE_SITE_CONF_datanucleus_schema_autoCreateAll=true
-  #     - HIVE_SITE_CONF_hive_metastore_schema_verification=false
-  #     - HIVE_SITE_CONF_hive_metastore_warehouse_dir=/user/hive/warehouse
-  #   ports:
-  #     - "9083:9083"
-  #   networks:
-  #     - data-highway
-  #   command: 
-  #     - /bin/bash
-  #     - -c
-  #     - |
-  #       export HIVE_HOME=/opt/hive
-  #       export HADOOP_HOME=/opt/hadoop
-  #       echo "HIVE_HOME is set to: $HIVE_HOME"
-  #       echo "Starting Hive Metastore service..."
-  #       $HIVE_HOME/bin/hive --service metastore
-  # hive-server:
-  #   image: bde2020/hive:2.3.2-postgresql-metastore
-  #   container_name: hive-server
-  #   depends_on:
-  #     - hive-metastore
-  #   environment:
-  #     SERVICE_PRECONDITION: "hive-metastore:9083"
-  #     HIVE_CORE_CONF_hive_metastore_uris: "thrift://hive-metastore:9083"
-  #   ports:
-  #     - "10000:10000"
-  #     - "10002:10002"
-  #   networks:
-  #     - data-highway
-  #   command: /opt/hive/bin/hive --service hiveserver2
+  hive-schema-init:
+    image: bde2020/hive:2.3.2-postgresql-metastore
+    container_name: hive-schema-init
+    restart: on-failure
+    depends_on:
+      hive-metastore-postgresql:
+        condition: service_healthy
+    environment:
+      - HIVE_HOME=/opt/hive
+      - HADOOP_HOME=/opt/hadoop
+      - HIVE_CORE_CONF_javax_jdo_option_ConnectionURL=jdbc:postgresql://hive-metastore-postgresql:5432/metastore
+      - HIVE_CORE_CONF_javax_jdo_option_ConnectionDriverName=org.postgresql.Driver
+      - HIVE_CORE_CONF_javax_jdo_option_ConnectionUserName=hive
+      - HIVE_CORE_CONF_javax_jdo_option_ConnectionPassword=hive
+      - HIVE_CORE_CONF_datanucleus_autoCreateSchema=true
+      - HIVE_CORE_CONF_datanucleus_schema_autoCreateAll=true
+      - HIVE_CORE_CONF_hive_metastore_schema_verification=false
+    networks:
+      - data-highway
+    command:
+      - /bin/bash
+      - -c
+      - |
+        export HIVE_HOME=/opt/hive
+        export HADOOP_HOME=/opt/hadoop
+        echo "HIVE_HOME is set to: $HIVE_HOME"
+        echo "Waiting 10s for PostgreSQL to be properly initialized..."
+        sleep 10
+        
+        echo "Checking PostgreSQL connection..."
+        pg_isready -h hive-metastore-postgresql -U hive -d metastore
+        
+        echo "Executing schema initialization..."
+        $HIVE_HOME/bin/schematool -dbType postgres -initSchema --verbose
+        
+        echo "Schema initialization completed."
+        echo "Container will exit in 5 seconds..."
+        sleep 5
+
+  hive-metastore:
+    image: bde2020/hive:2.3.2-postgresql-metastore
+    container_name: hive-metastore
+    restart: on-failure
+    depends_on:
+      namenode:
+        condition: service_healthy
+      datanode:
+        condition: service_started
+      hive-metastore-postgresql:
+        condition: service_healthy
+      hive-schema-init:
+        condition: service_completed_successfully
+    environment:
+      - SERVICE_PRECONDITION=namenode:9870 datanode:9864 hive-metastore-postgresql:5432
+      - HIVE_HOME=/opt/hive
+      - HADOOP_HOME=/opt/hadoop
+      - CORE_CONF_fs_defaultFS=hdfs://namenode:9000
+      - HIVE_CORE_CONF_javax_jdo_option_ConnectionURL=jdbc:postgresql://hive-metastore-postgresql:5432/metastore
+      - HIVE_CORE_CONF_javax_jdo_option_ConnectionDriverName=org.postgresql.Driver
+      - HIVE_CORE_CONF_javax_jdo_option_ConnectionUserName=hive
+      - HIVE_CORE_CONF_javax_jdo_option_ConnectionPassword=hive
+      - HIVE_CORE_CONF_datanucleus_autoCreateSchema=true
+      - HIVE_CORE_CONF_datanucleus_schema_autoCreateAll=true
+      - HIVE_CORE_CONF_hive_metastore_schema_verification=false
+      - HIVE_CORE_CONF_hive_metastore_uris=thrift://hive-metastore:9083
+      - HIVE_SITE_CONF_datanucleus_schema_autoCreateAll=true
+      - HIVE_SITE_CONF_hive_metastore_schema_verification=false
+      - HIVE_SITE_CONF_hive_metastore_warehouse_dir=/user/hive/warehouse
+    ports:
+      - "9083:9083"
+    networks:
+      - data-highway
+    command: 
+      - /bin/bash
+      - -c
+      - |
+        export HIVE_HOME=/opt/hive
+        export HADOOP_HOME=/opt/hadoop
+        echo "HIVE_HOME is set to: $HIVE_HOME"
+        echo "Starting Hive Metastore service..."
+        $HIVE_HOME/bin/hive --service metastore
+  hive-server:
+    image: bde2020/hive:2.3.2-postgresql-metastore
+    container_name: hive-server
+    depends_on:
+      - hive-metastore
+    environment:
+      SERVICE_PRECONDITION: "hive-metastore:9083"
+      HIVE_CORE_CONF_hive_metastore_uris: "thrift://hive-metastore:9083"
+    ports:
+      - "10003:10003"
+      - "10002:10002"
+    networks:
+      - data-highway
+    command: /opt/hive/bin/hive --service hiveserver2
 
 
   # Add ClickHouse
