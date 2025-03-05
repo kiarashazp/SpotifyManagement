@@ -1,4 +1,4 @@
-![Alt text](Monitoring.png)
+![Alt text](Monitor.png)
 
 # Monitoring System Using Prometheus and Grafana
 

@@ -88,4 +88,3 @@ This README provides a comprehensive guide to setting up a data pipeline using K
 
 This overall structure ensures a smooth data pipeline from data generation with EventSim to storing processed data in HDFS, with visualization and monitoring tools integrated along the way.
 
-Happy coding! 🚀
