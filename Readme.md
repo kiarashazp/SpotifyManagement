@@ -46,4 +46,4 @@ For details on ClickHouse and that queries, please refer to the [ClickHouse docu
 For See dashboard on Metabase, please refer to the [Metabase Documentation]
 
 ## Monitoring and Dashboards
-For details on Monitoring and Dashboards, please refer to the [Monitoring documentation](docs/Monitoring.png)
+For details on Monitoring and Dashboards, please refer to the [Monitoring documentation](docs/monitoring_system.md)
