@@ -29,7 +29,6 @@ For details on Kafka, please refer to the [Kafka documentation]
 ## Schema Registry 
 For details on Schema Registry, please refer to the [SchemaRegistry documentation](docs/schema_registry_guide.md)
 
-
 ## Hadoop
 For details on Hadoop, please refer to the [Hadoop documentation]
 

@@ -45,14 +45,14 @@ Dedicated exporters are preferable in the following scenarios:
 
 ## Comparison: JMX Exporter vs. Dedicated Exporter
 
-| Feature                     | JMX Exporter                          | Dedicated Exporter                  |
-|-----------------------------|---------------------------------------|-------------------------------------|
-| **Ease of Setup**           | Requires Java agent and config file   | Usually simpler to configure        |
-| **Performance**             | Can be resource-intensive for JVM     | Optimized for the specific service  |
-| **Metrics Coverage**        | Limited to JMX-exposed metrics        | Service-specific metrics            |
-| **Custom Metrics**          | Supports custom JMX metrics           | Limited to what the exporter offers |
-| **Pre-Built Dashboards**    | Requires manual dashboard creation    | Often comes with pre-built dashboards|
-| **Service Support**         | Works for any Java-based service      | Specific to the service it monitors |
+| Feature                  | JMX Exporter                        | Dedicated Exporter                    |
+|--------------------------|-------------------------------------|---------------------------------------|
+| **Ease of Setup**        | Requires Java agent and config file | Usually simpler to configure          |
+| **Performance**          | Can be resource-intensive for JVM   | Optimized for the specific service    |
+| **Metrics Coverage**     | Limited to JMX-exposed metrics      | Service-specific metrics              |
+| **Custom Metrics**       | Supports custom JMX metrics         | Limited to what the exporter offers   |
+| **Pre-Built Dashboards** | Requires manual dashboard creation  | Often comes with pre-built dashboards |
+| **Service Support**      | Works for any Java-based service    | Specific to the service it monitors   |
 
 ## Recommendations for Services
 
