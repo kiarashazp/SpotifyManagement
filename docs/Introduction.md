@@ -13,7 +13,7 @@ In this project, we are going to focus on a data infrastructure for a company si
 - We are also going to create a Gold layer where we can create attractive and effective reports and save them in HDFS and then take these reports to ClickHouse and visualize them with Metabase.
 - Finally, we are going to have complete monitoring with Prometheus/Grafana. 🚀📊
 
-![Alt text](Spotify.png)
+![Alt text](SpotifyArchitect.png)
 
 ## Directory Structure
     SpotifyManagement/
