@@ -1,33 +1,49 @@
-#مدیریت محتوای اسپاتیفای 🚀📊
+# Project Documentation
+Welcome to our project documentation. Below you will find links to the different sections of our project:
 
-قراره یک زیرساخت داده برای شرکتی مشابه به اسپاتیفای رو بسازیم که بتونه داده های حجیم که ریل تایم برامون ارسال میشن رو پردازش، ذخیره سازی و آماده گزارش بکنیم.
+## Table of Contents
+1. [Introduction](docs/Introduction.md) 👋
+2. [Docker Compose and Containers] 🐳
+3. [EventSim](docs/eventsim_data_generation.md) 🖥
+4. [Kafka] 🐦
+5. [Schema Registry](docs/schema_registry_guide.md) 🗂️
+6. [Hadoop] 🐘
+7. [Spark] 🔥
+8. [DBT](docs/dbt_spark_connection.md) 🔄
+9. [ClickHouse Queries and Reports] 🗄️🔍📊
+10. [Metabase] 💼
+11. [Monitoring of Kafka, Spark, HDFS, ClickHouse in Prometheus&Grafana](docs/monitoring_system.md) 🐦🔥🗄🛠️📊🚦
 
-## Directory Structure
-        SpotifyManagement/
-                ├── docker/
-                │      └── docker-compose.yaml
-                │       
-                ├── eventsim/
-                │
-                ├── docker/
-                │
-                ├── hadoop/
-                │       
-                ├── spark/
-                │
-                ├── requirements.txt
-                └── README.md
+## Introduction
+A brief overview of the project can be found in the [Introduction section](docs/Introduction.md)
+
+## Docker Compose and Containers
+For details on Docker Compose and containers, please refer to the [Docker documentation]
+
+## EventSim
+For details on EventSim, please refer to the [EventSim documentation](docs/eventsim_data_generation.md)
+
+## Kafka
+For details on Kafka, please refer to the [Kafka documentation]
+
+## Schema Registry 
+For details on Schema Registry, please refer to the [SchemaRegistry documentation](docs/schema_registry_guide.md)
 
 
-##  🛠 ابزارها و تکنولوژی‌ها
-        Apache Spark
-        Apache Kafka 
-        Apache Hadoop(HDFS)
-        DBT
-        Docker
-        Grafana & Prometheus 
-        Kubernetes
-        Clickhouse
-        Metabase
+## Hadoop
+For details on Hadoop, please refer to the [Hadoop documentation]
 
-### این فایل به مرور آپدیت خواهد شد 
+## Spark
+For details on Spark, please refer to the [Spark documentation]
+
+## DBT
+For details on DBT and Spark thrift, please refer to the [DBT documentation](docs/dbt_spark_connection.md)
+
+## ClickHouse Queries and Reports
+For details on ClickHouse and that queries, please refer to the [ClickHouse documentation]
+
+## Metabase
+For See dashboard on Metabase, please refer to the [Metabase Documentation]
+
+## Monitoring and Dashboards
+For details on Monitoring and Dashboards, please refer to the [Monitoring documentation](docs/Monitoring.png)
