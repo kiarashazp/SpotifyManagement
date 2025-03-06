@@ -200,7 +200,7 @@ services:
       - ../jmx-exporters/hdfs-jmx-exporter-config.yml:/opt/hadoop/conf/jmx_exporter.yml
     environment:
       - CLUSTER_NAME=test
-      - HADOOP_OPTS=-javaagent:/opt/hadoop/jmx_prometheus_javaagent.jar=7074:/opt/hadoop/conf/jmx_exporter.yml
+#      - HADOOP_OPTS=-javaagent:/opt/hadoop/jmx_prometheus_javaagent.jar=7074:/opt/hadoop/conf/jmx_exporter.yml
     env_file:
       - ../hadoop/hadoop.env
     networks:
