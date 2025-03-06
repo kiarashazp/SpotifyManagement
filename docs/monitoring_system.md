@@ -92,7 +92,7 @@ kafka-exporter:
     - data-highway
 ```
 
-## images of monitoring:
+## Images of Monitoring System:
 
 ### PrometheusUI:
 ![Alt text](PrometheusUI.png)
@@ -106,13 +106,13 @@ kafka-exporter:
 ### Kafka-exporter Monitoring:
 ![Alt text](kafka-exporter.png)
 
-### JVMOverview Monitoring images:
+### JVM Overview Monitoring Images:
 ![Alt text](JVMOverview.png)
 
-### node-exporter Monitoring overview:
+### Node-exporter Monitoring Overview:
 ![Alt text](node-exporterOverview.png)
 
-### node-exporter Monitoring images:
+### Node-exporter Monitoring Images:
 - ![Alt text](node-exporter-1.png)
 - ![Alt text](node-exporter-2.png)
 - ![Alt text](node-exporter-3.png)
