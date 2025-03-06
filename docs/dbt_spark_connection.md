@@ -1,4 +1,6 @@
-# Connecting dbt to Spark using Spark Thrift Server
+# Connecting DBT to Spark 
+
+Connecting dbt to Spark using Spark Thrift Server
 
 ## Overview
 
