@@ -19,8 +19,10 @@ This Dockerfile sets up the environment needed to run Kafka, Spark, Hadoop, sche
 - **datanode**
 - **resourcemanager**
 - **nodemanager1**
-- **clickhouse server**
+- **history server**
+- **clickhouse-server**
 - **dbt**
+- **postgres-metabase**
 - **metabase**
 - **prometheus**
 - **node-exporter**
