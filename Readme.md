@@ -5,7 +5,7 @@ Welcome to our project documentation. Below you will find links to the different
 1. [Introduction](docs/Introduction.md) 👋
 2. [Docker Compose and Containers] 🐳
 3. [EventSim](docs/eventsim_data_generation.md) 🖥
-4. [Kafka] 🐦
+4. [Kafka](docs/kafka_eventsim_integration.md) 🐦
 5. [Schema Registry](docs/schema_registry_guide.md) 🗂️
 6. [Hadoop] 🐘
 7. [Spark] 🔥
@@ -24,7 +24,7 @@ For details on Docker Compose and containers, please refer to the [Docker docume
 For details on EventSim, please refer to the [EventSim documentation](docs/eventsim_data_generation.md)
 
 ## Kafka
-For details on Kafka, please refer to the [Kafka documentation]
+For details on Kafka, please refer to the [Kafka documentation](docs/kafka_eventsim_integration.md)
 
 ## Schema Registry 
 For details on Schema Registry, please refer to the [SchemaRegistry documentation](docs/schema_registry_guide.md)
