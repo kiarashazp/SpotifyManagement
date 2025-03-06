@@ -38,4 +38,4 @@ In this project, we are going to focus on a data infrastructure for a company si
 - **Monitoring**: Grafana & Prometheus
 - **Other Tools**: Docker
 
-A general and comprehensive guide in this [README](guide.md)
+A general and comprehensive guide in this [README](requirements.md)

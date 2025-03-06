@@ -2,17 +2,18 @@
 Welcome to our project documentation. Below you will find links to the different sections of our project:
 
 ## Table of Contents
-1. [Introduction](docs/Introduction.md) 👋
-2. [Docker Compose and Containers] 🐳
-3. [EventSim](docs/eventsim_data_generation.md) 🖥
-4. [Kafka](docs/kafka_eventsim_integration.md) 🐦
-5. [Schema Registry](docs/schema_registry_guide.md) 🗂️
-6. [Hadoop](docs/hadoop_hdfs.md) 🐘
-7. [Spark](docs/apache_spark.md) 🔥
-8. [DBT](docs/dbt_spark_connection.md) 🔄
-9. [ClickHouse Queries and Reports] 🗄️🔍📊
-10. [Metabase](docs/Metabase.md) 💼
-11. [Monitoring of Kafka, Spark, HDFS, ClickHouse in Prometheus & Grafana](docs/monitoring_system.md) 🐦🔥🗄🛠️📊🚦
+1. [Problem statement](docs/requirements.md) 📝🤔💭
+2. [Introduction](docs/Introduction.md) 📢
+3. [Docker Compose and Containers] 🐳
+4. [EventSim](docs/eventsim_data_generation.md) 🖥
+5. [Kafka](docs/kafka_eventsim_integration.md) 🐦
+6. [Schema Registry](docs/schema_registry_guide.md) 🗂️
+7. [Hadoop](docs/hadoop_hdfs.md) 🐘
+8. [Spark](docs/apache_spark.md) 🔥
+9. [DBT](docs/dbt_spark_connection.md) 🔄
+10. [ClickHouse Queries and Reports] 🗄️🔍📊
+11. [Metabase](docs/Metabase.md) 💼
+12. [Monitoring of Kafka, Spark, HDFS, ClickHouse in Prometheus & Grafana](docs/monitoring_system.md) 🐦🔥🗄🛠️📊🚦
 
 ## Introduction
 A brief overview of the project can be found in the [Introduction section](docs/Introduction.md).
