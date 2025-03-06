@@ -12,7 +12,7 @@ Welcome to our project documentation. Below you will find links to the different
 8. [DBT](docs/dbt_spark_connection.md) 🔄
 9. [ClickHouse Queries and Reports] 🗄️🔍📊
 10. [Metabase](docs/Metabase.md) 💼
-11. [Monitoring of Kafka, Spark, HDFS, ClickHouse in Prometheus&Grafana](docs/monitoring_system.md) 🐦🔥🗄🛠️📊🚦
+11. [Monitoring of Kafka, Spark, HDFS, ClickHouse in Prometheus & Grafana](docs/monitoring_system.md) 🐦🔥🗄🛠️📊🚦
 
 ## Introduction
 A brief overview of the project can be found in the [Introduction section](docs/Introduction.md).
