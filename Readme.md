@@ -2,9 +2,9 @@
 Welcome to our project documentation. Below you will find links to the different sections of our project:
 
 ## Table of Contents
-1. [Problem statement](docs/requirements.md) 📝🤔💭
+1. [Problem Statement](docs/requirements.md) 📝🤔💭
 2. [Introduction](docs/Introduction.md) 📢
-3. [Docker Compose and Containers] 🐳
+3. [Docker Compose and Containers](docs/docker.md) 🐳
 4. [EventSim](docs/eventsim_data_generation.md) 🖥
 5. [Kafka](docs/kafka_eventsim_integration.md) 🐦
 6. [Schema Registry](docs/schema_registry_guide.md) 🗂️
@@ -16,14 +16,14 @@ Welcome to our project documentation. Below you will find links to the different
 12. [Monitoring of Kafka, Spark, HDFS, ClickHouse in Prometheus & Grafana](docs/monitoring_system.md) 🐦🔥🗄🛠️📊🚦
 
 
-## Problem statement
+## Problem Statement
 In this section, you can see a project [problem statement](docs/requirements.md).
 
 ## Introduction
 A brief overview of the project can be found in the [Introduction section](docs/Introduction.md).
 
 ## Docker Compose and Containers
-Refer to the Docker documentation for more information on Docker Compose and containers
+Refer to the [Docker documentation](docs/docker.md) for more information on Docker Compose and containers
 
 ## EventSim
 Detailed information about EventSim can be found in the [EventSim documentation](docs/eventsim_data_generation.md)

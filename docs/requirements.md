@@ -1,14 +1,14 @@
 # Overview
 This Readme describes the problem statement, the required tools, and their uses.
 
-## Project goal 🎯
+## Project Goal 🎯
 We are going to build a data infrastructure for a company similar to Spotify that can process, store, and prepare reports on the massive data that is sent to us in real time.
 
 ## Technologies and Tools 🛠
 - **Databases**: HDFS 🐘, ClickHouse 🗄️
-- **Workflow Management**: Apache Kafka 🐦, Apache Spark 🔥
+- **Workflow Management**: Apache Kafka 🐦, Apache Spark ✨
 - **Data Visualization**: Metabase 🔍📊
-- **Programming Languages**: Python 🐍, DBT 🔄
+- **Programming Languages**: Python 🐍, Pyspark 🌟, DBT 🔄
 - **Monitoring**: Grafana & Prometheus 🕵🏻
 - **Other Tools**: Docker 🐳, Schema Registry 🗂, EventSim 🖥
 
