@@ -19,7 +19,7 @@ with auth_data as (
         lon,
         itemInSession,
         success
-    from {{ source('bronze', 'auth_events') }}
+    from parquet.`hdfs://namenode:9000/user/bronze/auth_events`
     where ts is not null and userId is not null
 )
 

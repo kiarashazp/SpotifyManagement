@@ -10,4 +10,4 @@ spotify_analytics:
       schema: default
       connect_timeout: 60
       connect_retries: 5
-      threads: 4
+      threads: 1

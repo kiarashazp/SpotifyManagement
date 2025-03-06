@@ -21,7 +21,7 @@ with status_change_data as (
         itemInSession,
         status,
         success
-    from {{ source('bronze', 'status_change_events') }}
+    from parquet.`hdfs://namenode:9000/user/bronze/status_change_events`
     where ts is not null and userId is not null
 )
 

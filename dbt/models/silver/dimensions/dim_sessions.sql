@@ -13,7 +13,7 @@ with session_data as (
         min(ts) as session_start_ts,
         max(ts) as session_end_ts,
         count(*) as total_actions
-    from {{ source('bronze', 'listen_events') }}
+    from parquet.`hdfs://namenode:9000/user/bronze/listen_events`
     where sessionId is not null and userId is not null
     group by sessionId, userId
 
@@ -25,7 +25,7 @@ with session_data as (
         min(ts) as session_start_ts,
         max(ts) as session_end_ts,
         count(*) as total_actions
-    from {{ source('bronze', 'page_view_events') }}
+    from parquet.`hdfs://namenode:9000/user/bronze/page_view_events`
     where sessionId is not null and userId is not null
     group by sessionId, userId
 )

@@ -9,7 +9,7 @@
 with artist_data as (
     select
         distinct artist as artist_name
-    from {{ source('bronze', 'listen_events') }}
+    from parquet.`hdfs://namenode:9000/user/bronze/listen_events`
     where artist is not null
 )
 

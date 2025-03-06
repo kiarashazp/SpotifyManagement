@@ -12,7 +12,7 @@ with active_users_by_city as (
         l.state,
         count(distinct f.user_id) as active_users
     from {{ ref('fact_listen_events') }} f
-    join {{ ref('dim_locations') }} l on f.location_id = l.location_id
+    join {{ ref('dim_location') }} l on f.location_id = l.location_id
     group by l.city, l.state
 ),
 
@@ -23,7 +23,7 @@ total_sessions_by_city as (
         count(distinct s.session_id) as total_sessions
     from {{ ref('dim_sessions') }} s
     join {{ ref('fact_listen_events') }} f on s.session_id = f.session_id
-    join {{ ref('dim_locations') }} l on f.location_id = l.location_id
+    join {{ ref('dim_location') }} l on f.location_id = l.location_id
     group by l.city, l.state
 )
 

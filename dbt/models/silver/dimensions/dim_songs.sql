@@ -15,7 +15,7 @@ with song_data as (
             partition by song, artist
             order by ts desc
         ) as row_num
-    from {{ source('bronze', 'listen_events') }}
+    from parquet.`hdfs://namenode:9000/user/bronze/listen_events`
     where song is not null and artist is not null
 )
 

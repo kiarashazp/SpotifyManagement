@@ -8,25 +8,25 @@
 
 with timestamp_data as (
     select distinct ts
-    from {{ source('bronze', 'listen_events') }}
+    from parquet.`hdfs://namenode:9000/user/bronze/listen_events`
     where ts is not null
     
     union distinct
     
     select distinct ts
-    from {{ source('bronze', 'page_view_events') }}
+    from parquet.`hdfs://namenode:9000/user/bronze/page_view_events`
     where ts is not null
     
     union distinct
     
     select distinct ts
-    from {{ source('bronze', 'auth_events') }}
+    from parquet.`hdfs://namenode:9000/user/bronze/auth_events`
     where ts is not null
     
     union distinct
     
     select distinct ts
-    from {{ source('bronze', 'status_change_events') }}
+    from parquet.`hdfs://namenode:9000/user/bronze/status_change_events`
     where ts is not null
 )
 

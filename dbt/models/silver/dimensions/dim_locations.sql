@@ -14,7 +14,7 @@ with location_data as (
         zip,
         lat,
         lon
-    from {{ source('bronze', 'listen_events') }}
+    from parquet.`hdfs://namenode:9000/user/bronze/listen_events`
     where city is not null and state is not null
 )
 

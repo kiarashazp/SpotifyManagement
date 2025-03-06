@@ -11,7 +11,7 @@ services:
       - KEY_SERIALIZER=org.apache.kafka.common.serialization.ByteArraySerializer
       - VALUE_SERIALIZER=org.apache.kafka.common.serialization.ByteArraySerializer
       - SCHEMA_REGISTRY_URL=http://schema-registry:8085
-      - ACKS=all 
+      - ACKS=all
     ports:
       - "8083:8083"
     volumes:
@@ -147,9 +147,7 @@ services:
       - SPARK_MASTER_OPTS=-javaagent:/opt/bitnami/spark/jars/jmx_prometheus_javaagent.jar=7072:/opt/bitnami/spark/conf/jmx_exporter.yml
     ports:
       - '8081:8081'  # Spark Master UI
-      # - '7077:7077'  # Spark Master internal communication
       - '7072:7072'  # JMX Exporter port
-      - '10000:10000'
     volumes:
       - ../jmx-exporters/spark-jmx-exporter-config.yml:/opt/bitnami/spark/conf/jmx_exporter.yml
       - ../jmx-exporters/jmx_prometheus_javaagent-1.0.1.jar:/opt/bitnami/spark/jars/jmx_prometheus_javaagent.jar
@@ -157,12 +155,9 @@ services:
       data-highway:
         aliases:
           - spark
-    command: >
-      /opt/bitnami/spark/sbin/start-master.sh && 
-      /opt/bitnami/spark/sbin/start-thriftserver.sh 
-      --master spark://spark:7077 
-      --hiveconf hive.metastore.uris=thrift://hive-metastore:9083 
-      --hiveconf hive.server2.thrift.bind.host=0.0.0.0
+    command: /opt/bitnami/spark/sbin/start-master.sh
+
+
   spark-worker:
     image: docker.io/bitnami/spark:3.5
     environment:
@@ -190,36 +185,6 @@ services:
           - spark-worker
     command: /opt/bitnami/spark/sbin/start-worker.sh spark://spark:7077
 
-      #  spark-thrift:
-      #    image: docker.io/bitnami/spark:3.5
-      #    environment:
-      #      - SPARK_MODE=master
-      #      - SPARK_RPC_AUTHENTICATION_ENABLED=no
-      #      - SPARK_RPC_ENCRYPTION_ENABLED=no
-      #      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
-      #      - SPARK_SSL_ENABLED=no
-      #      - SPARK_USER=spark
-      #      - IVY_HOME=/opt/bitnami/spark/.ivy2  # <-- Add this
-      #      - SPARK_OPTS="--packages org.apache.spark:spark-hive_2.12:3.5.0 --conf spark.sql.hive.metastore.uris=thrift://hive-metastore:9083"
-      #    command: /opt/bitnami/spark/sbin/start-thriftserver.sh
-      #      --master spark://spark:7077
-      #      --conf spark.sql.hive.metastore.uris=thrift://hive-metastore:9083
-      #      --hiveconf hive.server2.thrift.port=10000
-      #      --hiveconf hive.server2.thrift.bind.host=0.0.0.0
-      #    ports:
-      #      - '10000:10000'  # Thrift server port
-      #    volumes:
-      #      - ./spark-thrift-entrypoint.sh:/spark-thrift-entrypoint.sh
-      #      - ../spark-ivy-cache:/opt/bitnami/spark/.ivy2
-      #      - ./spark-hive_2.12-3.5.0.jar:/opt/bitnami/spark/jars/spark-hive_2.12-3.5.0.jar
-      #    depends_on:
-      #      - spark
-      #    networks:
-      #      data-highway:
-      #        aliases:
-      #          - spark-thrift
-      #    entrypoint: ["/bin/bash", "/spark-thrift-entrypoint.sh"]
-      #
   namenode:
     image: bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8
     container_name: namenode
@@ -334,123 +299,6 @@ services:
         aliases:
           - historyserver
 
-  hive-metastore-postgresql:
-    image: postgres:13
-    container_name: hive-metastore-db
-    restart: always
-    environment:
-      - POSTGRES_USER=hive
-      - POSTGRES_PASSWORD=hive
-      - POSTGRES_DB=metastore
-    ports:
-      - "5432:5432"
-    volumes:
-      - ../hive/postgresql:/var/lib/postgresql/data
-    networks:
-      - data-highway
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U hive -d metastore"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-
-  hive-schema-init:
-    image: bde2020/hive:2.3.2-postgresql-metastore
-    container_name: hive-schema-init
-    restart: on-failure
-    depends_on:
-      hive-metastore-postgresql:
-        condition: service_healthy
-    environment:
-      - HIVE_HOME=/opt/hive
-      - HADOOP_HOME=/opt/hadoop
-      - HIVE_CORE_CONF_javax_jdo_option_ConnectionURL=jdbc:postgresql://hive-metastore-postgresql:5432/metastore
-      - HIVE_CORE_CONF_javax_jdo_option_ConnectionDriverName=org.postgresql.Driver
-      - HIVE_CORE_CONF_javax_jdo_option_ConnectionUserName=hive
-      - HIVE_CORE_CONF_javax_jdo_option_ConnectionPassword=hive
-      - HIVE_CORE_CONF_datanucleus_autoCreateSchema=true
-      - HIVE_CORE_CONF_datanucleus_schema_autoCreateAll=true
-      - HIVE_CORE_CONF_hive_metastore_schema_verification=false
-    networks:
-      - data-highway
-    command:
-      - /bin/bash
-      - -c
-      - |
-        export HIVE_HOME=/opt/hive
-        export HADOOP_HOME=/opt/hadoop
-        echo "HIVE_HOME is set to: $HIVE_HOME"
-        echo "Waiting 10s for PostgreSQL to be properly initialized..."
-        sleep 10
-        
-        echo "Checking PostgreSQL connection..."
-        pg_isready -h hive-metastore-postgresql -U hive -d metastore
-        
-        echo "Executing schema initialization..."
-        $HIVE_HOME/bin/schematool -dbType postgres -initSchema --verbose
-        
-        echo "Schema initialization completed."
-        echo "Container will exit in 5 seconds..."
-        sleep 5
-
-  hive-metastore:
-    image: bde2020/hive:2.3.2-postgresql-metastore
-    container_name: hive-metastore
-    restart: on-failure
-    depends_on:
-      namenode:
-        condition: service_healthy
-      datanode:
-        condition: service_started
-      hive-metastore-postgresql:
-        condition: service_healthy
-      hive-schema-init:
-        condition: service_completed_successfully
-    environment:
-      - SERVICE_PRECONDITION=namenode:9870 datanode:9864 hive-metastore-postgresql:5432
-      - HIVE_HOME=/opt/hive
-      - HADOOP_HOME=/opt/hadoop
-      - CORE_CONF_fs_defaultFS=hdfs://namenode:9000
-      - HIVE_CORE_CONF_javax_jdo_option_ConnectionURL=jdbc:postgresql://hive-metastore-postgresql:5432/metastore
-      - HIVE_CORE_CONF_javax_jdo_option_ConnectionDriverName=org.postgresql.Driver
-      - HIVE_CORE_CONF_javax_jdo_option_ConnectionUserName=hive
-      - HIVE_CORE_CONF_javax_jdo_option_ConnectionPassword=hive
-      - HIVE_CORE_CONF_datanucleus_autoCreateSchema=true
-      - HIVE_CORE_CONF_datanucleus_schema_autoCreateAll=true
-      - HIVE_CORE_CONF_hive_metastore_schema_verification=false
-      - HIVE_CORE_CONF_hive_metastore_uris=thrift://hive-metastore:9083
-      - HIVE_SITE_CONF_datanucleus_schema_autoCreateAll=true
-      - HIVE_SITE_CONF_hive_metastore_schema_verification=false
-      - HIVE_SITE_CONF_hive_metastore_warehouse_dir=/user/hive/warehouse
-    ports:
-      - "9083:9083"
-    networks:
-      - data-highway
-    command: 
-      - /bin/bash
-      - -c
-      - |
-        export HIVE_HOME=/opt/hive
-        export HADOOP_HOME=/opt/hadoop
-        echo "HIVE_HOME is set to: $HIVE_HOME"
-        echo "Starting Hive Metastore service..."
-        $HIVE_HOME/bin/hive --service metastore
-  hive-server:
-    image: bde2020/hive:2.3.2-postgresql-metastore
-    container_name: hive-server
-    depends_on:
-      - hive-metastore
-    environment:
-      SERVICE_PRECONDITION: "hive-metastore:9083"
-      HIVE_CORE_CONF_hive_metastore_uris: "thrift://hive-metastore:9083"
-    ports:
-      - "10003:10003"
-      - "10002:10002"
-    networks:
-      - data-highway
-    command: /opt/hive/bin/hive --service hiveserver2
-
-
   # Add ClickHouse
   clickhouse-server:
     image: clickhouse/clickhouse-server:latest
@@ -496,7 +344,6 @@ services:
     depends_on:
       - clickhouse-server
       - spark
-        #- spark-thrift
       - namenode
       - datanode
       - resourcemanager
@@ -610,7 +457,7 @@ volumes:
   postgres-metabase-data:
   metabase-data:
   clickhouse-data:
-  # hive-postgresql-data:
+
 
 networks:
   data-highway:
