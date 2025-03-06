@@ -33,12 +33,4 @@ This Dockerfile sets up the environment needed to run Kafka, Spark, Hadoop, sche
 
 1️⃣ **Clone this repository**
 
-2️⃣ **Start Services** 
-
-```
-    docker-compose up -d
-```
-
-
-
-
+2️⃣ **Start the services with the commands written in this [Readme](commands.md)**

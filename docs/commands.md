@@ -55,7 +55,6 @@ spark-submit \
 docker exec -it --user root dbt bash -c "apt-get update && apt-get install -y libsasl2-dev python-dev libldap2-dev libssl-dev"
 
 docker exec -it dbt bash -c "pip install thrift sasl thrift_sasl pyhive"
-
-
-
 ```
+
+

@@ -12,9 +12,8 @@ Welcome to our project documentation. Below you will find links to the different
 8. [Spark](docs/apache_spark.md) 🔥
 9. [Connecting DBT to Spark](docs/dbt_spark_connection.md) 🔗
 10. [DBT](docs/facts_dimensions.md) 🔄
-11. [ClickHouse Queries and Reports] 🗄️🔍📊
-12. [Metabase](docs/Metabase.md) 💼
-13. [Monitoring of Kafka, Spark, HDFS, ClickHouse in Prometheus & Grafana](docs/monitoring_system.md) 🐦🔥🗄🛠️📊🚦
+11. [ClickHouse & Metabase](docs/ClickHouse-Metabase.md) 🗄️🔍📊💼
+12. [Monitoring of Kafka, Spark, HDFS, ClickHouse in Prometheus & Grafana](docs/monitoring_system.md) 🐦🔥🗄🛠️📊🚦
 
 
 ## Problem Statement
@@ -47,11 +46,8 @@ Information on Connecting DBT and Spark Thrift is available in the [Connecting D
 ## DBT
 Information about DBT in [DBT documentation](docs/facts_dimensions.md)
 
-## ClickHouse Queries and Reports
-For insights on ClickHouse and related queries, refer to the [ClickHouse documentation]
-
 ## Metabase
-Access the Metabase Documentation to view the dashboard on [Metabase](docs/Metabase.md)
+For insights on ClickHouse and related queries and Access the Metabase Documentation to view the dashboard on [documentation](docs/ClickHouse-Metabase.md)
 
 ## Monitoring and Dashboards
 Consult the [Monitoring documentation](docs/monitoring_system.md) for details on Monitoring and Dashboards.

@@ -1,5 +1,9 @@
-# Show Reports and Dashboard in Metabase 
+# ClickHouse
 
+- Based on this [SQL file](../clickhouse/table_definitions.sql), the database is created and all tables are created in ClickHouse.
+- with the help of [this file], inserted data from HDFS into these tables.
+
+# Metabase
 ## All Tables
 ![Alt text](TableOfDatabase.png)
 
