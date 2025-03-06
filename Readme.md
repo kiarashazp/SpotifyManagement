@@ -15,6 +15,10 @@ Welcome to our project documentation. Below you will find links to the different
 11. [Metabase](docs/Metabase.md) 💼
 12. [Monitoring of Kafka, Spark, HDFS, ClickHouse in Prometheus & Grafana](docs/monitoring_system.md) 🐦🔥🗄🛠️📊🚦
 
+
+## Problem statement
+In this section, you can see a project [problem statement](docs/requirements.md).
+
 ## Introduction
 A brief overview of the project can be found in the [Introduction section](docs/Introduction.md).
 
