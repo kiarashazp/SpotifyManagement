@@ -59,3 +59,15 @@ When using Schema Registry with Kafka, the producer sends data to Kafka with a J
 All services are defined in the `docker-compose.yml` file, making it easier to develop and test the entire setup. This includes Kafka, Spark, EventSim, Hadoop, ClickHouse, Metabase, Grafana, Prometheus, Schema Registry, and DBT.
 
 
+### Architecture 
+**Summary Architect**
+
+![alt text](ArchitectPhase1.png)
+
+**Complete Architect**
+
+![alt text](SpotifyArchitect.png)
+
+**Monitoring**
+
+![alt text](Monitor.png)
