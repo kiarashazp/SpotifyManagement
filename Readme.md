@@ -15,34 +15,34 @@ Welcome to our project documentation. Below you will find links to the different
 11. [Monitoring of Kafka, Spark, HDFS, ClickHouse in Prometheus&Grafana](docs/monitoring_system.md) 🐦🔥🗄🛠️📊🚦
 
 ## Introduction
-A brief overview of the project can be found in the [Introduction section](docs/Introduction.md)
+A brief overview of the project can be found in the [Introduction section](docs/Introduction.md).
 
 ## Docker Compose and Containers
-For details on Docker Compose and containers, please refer to the [Docker documentation]
+Refer to the Docker documentation for more information on Docker Compose and containers
 
 ## EventSim
-For details on EventSim, please refer to the [EventSim documentation](docs/eventsim_data_generation.md)
+Detailed information about EventSim can be found in the [EventSim documentation](docs/eventsim_data_generation.md)
 
 ## Kafka
-For details on Kafka, please refer to the [Kafka documentation](docs/kafka_eventsim_integration.md)
+Explore the [Kafka documentation](docs/kafka_eventsim_integration.md) for comprehensive details on Kafka.
 
 ## Schema Registry 
-For details on Schema Registry, please refer to the [SchemaRegistry documentation](docs/schema_registry_guide.md)
+Check the SchemaRegistry documentation for more about [SchemaRegistry](docs/schema_registry_guide.md)
 
 ## Hadoop
-For details on Hadoop, please refer to the [Hadoop documentation](docs/hadoop_hdfs.md)
+More information about Hadoop can be accessed in the [Hadoop documentation](docs/hadoop_hdfs.md)
 
 ## Spark
-For details on Spark, please refer to the [Spark documentation](docs/apache_spark.md)
+The Spark documentation contains all the details about [Spark](docs/apache_spark.md).
 
 ## DBT
-For details on DBT and Spark thrift, please refer to the [DBT documentation](docs/dbt_spark_connection.md)
+Information on DBT and Spark Thrift is available in the [DBT documentation](docs/dbt_spark_connection.md)
 
 ## ClickHouse Queries and Reports
-For details on ClickHouse and that queries, please refer to the [ClickHouse documentation]
+For insights on ClickHouse and related queries, refer to the [ClickHouse documentation].
 
 ## Metabase
-For See dashboard on Metabase, please refer to the [Metabase Documentation](docs/Metabase.md)
+Access the Metabase Documentation to view the dashboard on [Metabase](docs/Metabase.md)
 
 ## Monitoring and Dashboards
-For details on Monitoring and Dashboards, please refer to the [Monitoring documentation](docs/monitoring_system.md)
+Consult the [Monitoring documentation](docs/monitoring_system.md) for details on Monitoring and Dashboards.
