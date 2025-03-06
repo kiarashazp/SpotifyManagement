@@ -8,7 +8,7 @@ Welcome to our project documentation. Below you will find links to the different
 4. [Kafka](docs/kafka_eventsim_integration.md) 🐦
 5. [Schema Registry](docs/schema_registry_guide.md) 🗂️
 6. [Hadoop](docs/hadoop_hdfs.md) 🐘
-7. [Spark] 🔥
+7. [Spark](docs/apache_spark.md) 🔥
 8. [DBT](docs/dbt_spark_connection.md) 🔄
 9. [ClickHouse Queries and Reports] 🗄️🔍📊
 10. [Metabase](docs/Metabase.md) 💼
@@ -33,7 +33,7 @@ For details on Schema Registry, please refer to the [SchemaRegistry documentatio
 For details on Hadoop, please refer to the [Hadoop documentation](docs/hadoop_hdfs.md)
 
 ## Spark
-For details on Spark, please refer to the [Spark documentation]
+For details on Spark, please refer to the [Spark documentation](docs/apache_spark.md)
 
 ## DBT
 For details on DBT and Spark thrift, please refer to the [DBT documentation](docs/dbt_spark_connection.md)
