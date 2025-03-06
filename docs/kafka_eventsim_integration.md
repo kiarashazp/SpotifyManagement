@@ -23,13 +23,13 @@ EventSim can be used to generate various types of events, such as authentication
 
 In this setup, KRaft (Kafka Raft) is used instead of Zookeeper for managing the Kafka broker service. KRaft is a newer metadata management mode for Kafka that eliminates the need for Zookeeper. Here's a comparison of KRaft and Zookeeper:
 
-| Feature                   | KRaft                                             | Zookeeper                                       |
-|---------------------------|---------------------------------------------------|-------------------------------------------------|
-| **Architecture**          | Integrated metadata management within Kafka       | External metadata management service            |
-| **Deployment Complexity** | Simplified deployment (no separate Zookeeper)     | Requires separate deployment and management     |
-| **Fault Tolerance**       | High availability with Raft protocol              | High availability with Paxos-like protocol      |
-| **Performance**           | Improved performance and reduced latency          | Slightly higher latency due to external service |
-| **Operational Overhead**  | Lower operational overhead (single system)        | Higher operational overhead (managing two systems) |
+| Feature                   | KRaft                                         | Zookeeper                                          |
+|---------------------------|-----------------------------------------------|----------------------------------------------------|
+| **Architecture**          | Integrated metadata management within Kafka   | External metadata management service               |
+| **Deployment Complexity** | Simplified deployment (no separate Zookeeper) | Requires separate deployment and management        |
+| **Fault Tolerance**       | High availability with Raft protocol          | High availability with Paxos-like protocol         |
+| **Performance**           | Improved performance and reduced latency      | Slightly higher latency due to external service    |
+| **Operational Overhead**  | Lower operational overhead (single system)    | Higher operational overhead (managing two systems) |
 
 ### **Advantages of KRaft**
 
