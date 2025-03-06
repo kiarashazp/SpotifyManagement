@@ -7,7 +7,7 @@ Welcome to our project documentation. Below you will find links to the different
 3. [EventSim](docs/eventsim_data_generation.md) 🖥
 4. [Kafka](docs/kafka_eventsim_integration.md) 🐦
 5. [Schema Registry](docs/schema_registry_guide.md) 🗂️
-6. [Hadoop] 🐘
+6. [Hadoop](docs/hadoop_hdfs.md) 🐘
 7. [Spark] 🔥
 8. [DBT](docs/dbt_spark_connection.md) 🔄
 9. [ClickHouse Queries and Reports] 🗄️🔍📊
@@ -30,7 +30,7 @@ For details on Kafka, please refer to the [Kafka documentation](docs/kafka_event
 For details on Schema Registry, please refer to the [SchemaRegistry documentation](docs/schema_registry_guide.md)
 
 ## Hadoop
-For details on Hadoop, please refer to the [Hadoop documentation]
+For details on Hadoop, please refer to the [Hadoop documentation](docs/hadoop_hdfs.md)
 
 ## Spark
 For details on Spark, please refer to the [Spark documentation]
