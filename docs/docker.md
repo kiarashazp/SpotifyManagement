@@ -1,0 +1,41 @@
+# Docker Compose Setup for Kafka, Spark, Hadoop, schema registry, Grafana, Prometheus, ClickHouse and Metabase.
+
+## Overview
+This Dockerfile sets up the environment needed to run Kafka, Spark, Hadoop, schema registry, Grafana, Prometheus, ClickHouse and Metabase.
+
+## Docker Compose Configuration
+
+### Services
+
+- **eventsim**:
+- **broker**:
+- **kafka-exporter**:
+- **akhq**:
+- **schema-registry**:
+- **schema-registry-init**:
+- **spark**:
+- **spark-worker**:
+- **namenode**:
+- **datanode**:
+- **resourcemanager**:
+- **nodemanager1**:
+- **clickhouse server**:
+- **dbt**:
+- **metabase**:
+- **prometheus**:
+- **node-exporter**:
+- **alertmanager**:
+- **grafana**:
+
+### Using Docker and Docker Compose
+
+1- Clone this repository.
+2- Start Services 
+
+```
+    docker-compose up -d
+```
+
+
+
+

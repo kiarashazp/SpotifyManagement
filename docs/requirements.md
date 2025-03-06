@@ -57,6 +57,13 @@ Now in this project we will install DBT on Spark and read the data from the Bron
 ### Grafana & Prometheus
 
 ### Schema Registry
+Schema Registry is a service or tool used to manage and maintain schemas in distributed systems, especially in the Apache Kafka ecosystem. Schemas define the structure and format of data and ensure that data exchanged between producers and consumers is consistent and understandable. Its advantage is error prevention
+
+We used Schema Registry in Kafka. Producer sends data to Kafka with a schema (JSON). 
+Schema Registry checks the schema and assigns a unique ID to it. 
+Consumer, upon receiving the ID, downloads the schema from Registry and interprets the data accordingly.
+
+Also, another common format in Schema Registry other than JSON is Avro
 
 ### docker compose 🐳
 - All services are defined in the docker-compose.yml file. Everything comes together, easier to develop and test.
