@@ -90,4 +90,30 @@ kafka-exporter:
     - "9308:9308"
   networks:
     - data-highway
+```
 
+## images of monitoring:
+
+### PrometheusUI:
+![Alt text](PrometheusUI.png)
+
+### Overview Monitoring:
+![Alt text](OverviewMonitoring.png)
+
+### Kafka-exporter Monitoring:
+![Alt text](kafka-exporter.png)
+
+### JVMOverview Monitoring images:
+![Alt text](JVMOverview.png)
+
+### node-exporter Monitoring overview:
+![Alt text](node-exporterOverview.png)
+
+### node-exporter Monitoring images:
+- ![Alt text](node-exporter-1.png)
+- ![Alt text](node-exporter-2.png)
+- ![Alt text](node-exporter-3.png)
+- ![Alt text](node-exporter-4.png)
+- ![Alt text](node-exporter-5.png)
+- ![Alt text](node-exporter-6.png)
+- ![Alt text](node-exporter-7.png)
