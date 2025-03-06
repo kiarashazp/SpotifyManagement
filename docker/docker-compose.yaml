@@ -200,7 +200,7 @@ services:
       - ../jmx-exporters/hdfs-jmx-exporter-config.yml:/opt/hadoop/conf/jmx_exporter.yml
     environment:
       - CLUSTER_NAME=test
-      # - HADOOP_OPTS=-javaagent:/opt/hadoop/jmx_prometheus_javaagent.jar=7074:/opt/hadoop/conf/jmx_exporter.yml
+      - HADOOP_OPTS=-javaagent:/opt/hadoop/jmx_prometheus_javaagent.jar=7074:/opt/hadoop/conf/jmx_exporter.yml
     env_file:
       - ../hadoop/hadoop.env
     networks:
@@ -309,9 +309,7 @@ services:
       - "9001:9000"  # Native port
     volumes:
       - ../clickhouse/data:/var/lib/clickhouse
-      # Remove the custom config files initially to use default configuration
-      # - ../clickhouse/config/config.xml:/etc/clickhouse-server/config.xml
-      # - ../clickhouse/config/users.xml:/etc/clickhouse-server/users.xml
+
     environment:
       # Add environment variables for basic configuration
       - CLICKHOUSE_DB=spotify
@@ -342,7 +340,6 @@ services:
       - ../hadoop/hadoop.env:/etc/hadoop/hadoop.env
     working_dir: /usr/app
     depends_on:
-      - clickhouse-server
       - spark
       - namenode
       - datanode
