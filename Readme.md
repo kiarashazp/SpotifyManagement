@@ -10,7 +10,7 @@ Welcome to our project documentation. Below you will find links to the different
 6. [Schema Registry](docs/schema_registry_guide.md) 🗂️
 7. [Hadoop](docs/hadoop_hdfs.md) 🐘
 8. [Spark](docs/apache_spark.md) 🔥
-9. [Connecting DBT to Spark](docs/dbt_spark_connection.md) 🔥
+9. [Connecting DBT to Spark](docs/dbt_spark_connection.md) 🔗
 10. [DBT](docs/facts_dimensions.md) 🔄
 11. [ClickHouse Queries and Reports] 🗄️🔍📊
 12. [Metabase](docs/Metabase.md) 💼
