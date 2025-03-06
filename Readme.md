@@ -2,7 +2,7 @@
 Welcome to our project documentation. Below you will find links to the different sections of our project:
 
 ## Table of Contents
-1. [Problem Statement](docs/requirements.md) 📝🤔💭
+1. [Problem Statement](docs/ProblemStatement.md) 📝🤔💭
 2. [Introduction](docs/Introduction.md) 📢
 3. [Docker Compose and Containers](docs/docker.md) 🐳
 4. [EventSim](docs/eventsim_data_generation.md) 🖥
@@ -17,7 +17,7 @@ Welcome to our project documentation. Below you will find links to the different
 
 
 ## Problem Statement
-In this section, you can see a project [problem statement](docs/requirements.md).
+In this section, you can see a project [problem statement](docs/ProblemStatement.md).
 
 ## Introduction
 A brief overview of the project can be found in the [Introduction section](docs/Introduction.md).
