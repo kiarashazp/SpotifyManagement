@@ -125,8 +125,9 @@ services:
   schema-registry-init:
     image: confluentinc/cp-schema-registry:latest
     volumes:
-      - ../schema-registry/entrypoint.sh:/scripts/entrypoint.sh
-      - ../schema-registry/json:/schemas/json
+      - ./sr-entrypoint.sh:/scripts/entrypoint.sh
+      - /schema-registry/json:/schemas/json
+    restart: on-failure
     depends_on:
       schema-registry:
         condition: service_healthy
@@ -146,7 +147,6 @@ services:
       - SPARK_MASTER_OPTS=-javaagent:/opt/bitnami/spark/jars/jmx_prometheus_javaagent.jar=7072:/opt/bitnami/spark/conf/jmx_exporter.yml
     ports:
       - '8081:8081'  # Spark Master UI
-      # - '7077:7077'  # Spark Master internal communication
       - '7072:7072'  # JMX Exporter port
     volumes:
       - ../jmx-exporters/spark-jmx-exporter-config.yml:/opt/bitnami/spark/conf/jmx_exporter.yml
@@ -156,6 +156,7 @@ services:
         aliases:
           - spark
     command: /opt/bitnami/spark/sbin/start-master.sh
+
 
   spark-worker:
     image: docker.io/bitnami/spark:3.5
@@ -199,7 +200,7 @@ services:
       - ../jmx-exporters/hdfs-jmx-exporter-config.yml:/opt/hadoop/conf/jmx_exporter.yml
     environment:
       - CLUSTER_NAME=test
-      - HADOOP_OPTS=-javaagent:/opt/hadoop/jmx_prometheus_javaagent.jar=7074:/opt/hadoop/conf/jmx_exporter.yml
+      # - HADOOP_OPTS=-javaagent:/opt/hadoop/jmx_prometheus_javaagent.jar=7074:/opt/hadoop/conf/jmx_exporter.yml
     env_file:
       - ../hadoop/hadoop.env
     networks:
@@ -298,6 +299,117 @@ services:
         aliases:
           - historyserver
 
+  # Add ClickHouse
+  clickhouse-server:
+    image: clickhouse/clickhouse-server:latest
+    container_name: clickhouse-server
+    restart: always
+    ports:
+      - "8123:8123"  # HTTP port
+      - "9001:9000"  # Native port
+    volumes:
+      - ../clickhouse/data:/var/lib/clickhouse
+      # Remove the custom config files initially to use default configuration
+      # - ../clickhouse/config/config.xml:/etc/clickhouse-server/config.xml
+      # - ../clickhouse/config/users.xml:/etc/clickhouse-server/users.xml
+    environment:
+      # Add environment variables for basic configuration
+      - CLICKHOUSE_DB=spotify
+      - CLICKHOUSE_USER=default
+      - CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT=1
+    ulimits:
+      nofile:
+        soft: 262144
+        hard: 262144
+    networks:
+      - data-highway
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8123/ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+
+  # Add dbt with HDFS support
+  dbt:
+    image: fishtownanalytics/dbt:1.0.0
+    container_name: dbt
+    volumes:
+      - ../dbt:/usr/app
+      - ../hadoop/conf:/etc/hadoop/conf
+      - ./dbt-entrypoint.sh:/entrypoint.sh
+      # Add direct access to Hadoop configurations
+      - ../hadoop/hadoop.env:/etc/hadoop/hadoop.env
+    working_dir: /usr/app
+    depends_on:
+      - clickhouse-server
+      - spark
+      - namenode
+      - datanode
+      - resourcemanager
+    networks:
+      - data-highway
+    environment:
+      - DBT_PROFILES_DIR=/usr/app/profiles
+      - HADOOP_CONF_DIR=/etc/hadoop/conf
+      - HADOOP_USER_NAME=root
+      - SPARK_HOME=/usr/local/spark
+      - PYTHONPATH=/usr/local/spark/python:/usr/local/spark/python/lib/py4j-0.10.9-src.zip
+    entrypoint: ["/bin/bash", "/entrypoint.sh"]
+    # Keep the container running
+    tty: true
+    stdin_open: true
+
+  postgres-metabase:
+    image: postgres:13
+    container_name: postgres-metabase
+    hostname: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=metabase
+      - POSTGRES_PASSWORD=mysecretpassword
+      - POSTGRES_DB=metabaseappdb
+    volumes:
+      - ../postgres-metabase-data:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"  # Using 5433 externally to avoid conflict with Hive's PostgreSQL
+    networks:
+      - data-highway
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U metabase"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Metabase with ClickHouse driver
+  metabase:
+    image: lucasluanp/metabase-with-clickhouse
+    container_name: metabase
+    hostname: metabase
+    volumes:
+      - /dev/urandom:/dev/random:ro
+    ports:
+      - 3001:3001
+    environment:
+      MB_DB_TYPE: postgres
+      MB_DB_DBNAME: metabaseappdb
+      MB_DB_PORT: 5432
+      MB_DB_USER: metabase
+      MB_DB_PASS: mysecretpassword
+      MB_DB_HOST: postgres-metabase
+      MB_JETTY_PORT: 3001
+    networks:
+      - data-highway
+    depends_on:
+      postgres-metabase:
+        condition: service_healthy
+      clickhouse-server:
+        condition: service_started
+    healthcheck:
+      test: curl --fail -I http://localhost:3001/api/health || exit 1
+      interval: 15s
+      timeout: 5s
+      retries: 5
   prometheus:
     image: prom/prometheus:latest
     container_name: prometheus
@@ -342,6 +454,10 @@ volumes:
   hadoop_namenode:
   hadoop_datanode:
   hadoop_historyserver:
+  postgres-metabase-data:
+  metabase-data:
+  clickhouse-data:
+
 
 networks:
   data-highway:

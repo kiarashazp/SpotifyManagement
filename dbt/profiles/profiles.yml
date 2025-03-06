@@ -1,0 +1,13 @@
+spotify_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: spark
+      method: thrift
+      host: spark    # Changed from hive-server
+      port: 10000           # Changed from 10003
+      user: spark
+      schema: default
+      connect_timeout: 60
+      connect_retries: 5
+      threads: 1

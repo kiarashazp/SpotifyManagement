@@ -1,0 +1,245 @@
+version: 2
+
+sources:
+  - name: bronze
+    schema: bronze
+    tables:
+      - name: listen_events
+        description: "Raw listen events data from users playing songs"
+        external:
+          location: "{{ var('bronze_path') }}/listen_events/*/*/*"
+          file_format: parquet
+        columns:
+          - name: artist
+            description: "Artist for this song"
+          - name: auth
+            description: "Whether user was logged in or not"
+          - name: city
+            description: "User's city"
+          - name: duration
+            description: "Song duration in seconds"
+          - name: firstName
+            description: "User's first name"
+          - name: gender
+            description: "User's gender"
+          - name: itemInSession
+            description: "Sequence number for action(s) performed"
+          - name: lastName
+            description: "User's surname"
+          - name: lat
+            description: "Latitude of user's location"
+          - name: level
+            description: "Type of user (paid/free)"
+          - name: lon
+            description: "Longitude of user's location"
+          - name: registration
+            description: "Timestamp of user registration time"
+          - name: sessionId
+            description: "Session ID for this user"
+          - name: song
+            description: "Song played"
+          - name: state
+            description: "User's state"
+          - name: success
+            description: "Whether this action was successful or not"
+          - name: ts
+            description: "Timestamp (Unix epoch time)"
+          - name: userAgent
+            description: "User agent (e.g. browser type)"
+          - name: userId
+            description: "Unique user ID"
+          - name: zip
+            description: "User's zip code"
+          - name: processing_time
+            description: "Time when this record was processed"
+          - name: event_date
+            description: "Date of the event in YYYY-MM-DD format"
+          - name: year
+            description: "Year of the event"
+          - name: month
+            description: "Month of the event"
+          - name: day
+            description: "Day of the event"
+          - name: hour
+            description: "Hour of the event"
+
+      - name: page_view_events
+        description: "Raw page view events data from users navigating the application"
+        external:
+          location: "{{ var('bronze_path') }}/page_view_events/*/*/*"
+          file_format: parquet
+        columns:
+          - name: artist
+            description: "Artist for this song"
+          - name: auth
+            description: "Whether user was logged in or not"
+          - name: city
+            description: "User's city"
+          - name: duration
+            description: "Song duration in seconds"
+          - name: firstName
+            description: "User's first name"
+          - name: gender
+            description: "User's gender"
+          - name: itemInSession
+            description: "Sequence number for action(s) performed"
+          - name: lastName
+            description: "User's surname"
+          - name: lat
+            description: "Latitude of user's location"
+          - name: level
+            description: "Type of user (paid/free)"
+          - name: lon
+            description: "Longitude of user's location"
+          - name: method
+            description: "How the user accessed this page"
+          - name: page
+            description: "Page the user was on"
+          - name: registration
+            description: "Timestamp of user registration time"
+          - name: sessionId
+            description: "Session ID for this user"
+          - name: song
+            description: "Song played"
+          - name: state
+            description: "User's state"
+          - name: status
+            description: "Page status"
+          - name: success
+            description: "Whether this action was successful or not"
+          - name: ts
+            description: "Timestamp (Unix epoch time)"
+          - name: userAgent
+            description: "User agent (e.g. browser type)"
+          - name: userId
+            description: "Unique user ID"
+          - name: zip
+            description: "User's zip code"
+          - name: processing_time
+            description: "Time when this record was processed"
+          - name: event_date
+            description: "Date of the event in YYYY-MM-DD format"
+          - name: year
+            description: "Year of the event"
+          - name: month
+            description: "Month of the event"
+          - name: day
+            description: "Day of the event"
+          - name: hour
+            description: "Hour of the event"
+
+      - name: auth_events
+        description: "Raw authentication events data (logins, logouts)"
+        external:
+          location: "{{ var('bronze_path') }}/auth_events/*/*/*"
+          file_format: parquet
+        columns:
+          - name: city
+            description: "User's city"
+          - name: firstName
+            description: "User's first name"
+          - name: gender
+            description: "User's gender"
+          - name: itemInSession
+            description: "Sequence number for action(s) performed"
+          - name: lastName
+            description: "User's surname"
+          - name: lat
+            description: "Latitude of user's location"
+          - name: level
+            description: "Type of user (paid/free)"
+          - name: lon
+            description: "Longitude of user's location"
+          - name: registration
+            description: "Timestamp of user registration time"
+          - name: sessionId
+            description: "Session ID for this user"
+          - name: state
+            description: "User's state"
+          - name: success
+            description: "Whether this action was successful or not"
+          - name: ts
+            description: "Timestamp (Unix epoch time)"
+          - name: userAgent
+            description: "User agent (e.g. browser type)"
+          - name: userId
+            description: "Unique user ID"
+          - name: zip
+            description: "User's zip code"
+          - name: processing_time
+            description: "Time when this record was processed"
+          - name: event_date
+            description: "Date of the event in YYYY-MM-DD format"
+          - name: year
+            description: "Year of the event"
+          - name: month
+            description: "Month of the event"
+          - name: day
+            description: "Day of the event"
+          - name: hour
+            description: "Hour of the event"
+
+      - name: status_change_events
+        description: "Raw status change events data (subscription changes, etc.)"
+        external:
+          location: "{{ var('bronze_path') }}/status_change_events/*/*/*"
+          file_format: parquet
+        columns:
+          - name: artist
+            description: "Artist for this song"
+          - name: auth
+            description: "Whether user was logged in or not"
+          - name: city
+            description: "User's city"
+          - name: duration
+            description: "Song duration in seconds"
+          - name: firstName
+            description: "User's first name"
+          - name: gender
+            description: "User's gender"
+          - name: itemInSession
+            description: "Sequence number for action(s) performed"
+          - name: lastName
+            description: "User's surname"
+          - name: lat
+            description: "Latitude of user's location"
+          - name: level
+            description: "Type of user (paid/free)"
+          - name: lon
+            description: "Longitude of user's location"
+          - name: method
+            description: "How the user accessed this page"
+          - name: page
+            description: "Page the user was on"
+          - name: registration
+            description: "Timestamp of user registration time"
+          - name: sessionId
+            description: "Session ID for this user"
+          - name: song
+            description: "Song played"
+          - name: state
+            description: "User's state"
+          - name: status
+            description: "Page status"
+          - name: success
+            description: "Whether this action was successful or not"
+          - name: ts
+            description: "Timestamp (Unix epoch time)"
+          - name: userAgent
+            description: "User agent (e.g. browser type)"
+          - name: userId
+            description: "Unique user ID"
+          - name: zip
+            description: "User's zip code"
+          - name: processing_time
+            description: "Time when this record was processed"
+          - name: event_date
+            description: "Date of the event in YYYY-MM-DD format"
+          - name: year
+            description: "Year of the event"
+          - name: month
+            description: "Month of the event"
+          - name: day
+            description: "Day of the event"
+          - name: hour
+            description: "Hour of the event"
