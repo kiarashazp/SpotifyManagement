@@ -55,13 +55,27 @@ dbt (short for data build tool) is an open source tool for building and managing
 Now in this project we will install DBT on Spark and read the data from the Bronze layer into HDFS and then transform it and store it back into HDFS, this time in the Silver layer.
 
 ### Grafana & Prometheus
+Prometheus collects and stores metrics as time series data, recording information with a timestamp. It operates by scraping metrics from various services and systems, storing them efficiently, and providing powerful querying capabilities through PromQL (Prometheus Query Language). Grafana integrates with Prometheus and other data sources. It provides a rich set of visualizations and dashboards, enabling users to monitor and analyze their metrics in real time.
+
+**Exporters**
+
+1️⃣ **Kafka JMX Exporter** Extract metrics from Kafka, including the number of messages, lag, etc. 
+
+2️⃣ **Spark Exporter/JMX** Monitor jobs, stages, and executors in Spark. 
+
+3️⃣ **HDFS/Hadoop Exporter** Monitor NameNode, DataNode, ResourceManager, etc., in HDFS. 
+
+4️⃣ **ClickHouse Exporter** Check metrics like the number of queries, response speed, storage usage, etc., in ClickHouse. 
+
+5️⃣ **Node Exporter** Usually part of the default Prometheus stack, it monitors the resources of each node.
 
 ### Schema Registry
 Schema Registry is a service or tool used to manage and maintain schemas in distributed systems, especially in the Apache Kafka ecosystem. Schemas define the structure and format of data and ensure that data exchanged between producers and consumers is consistent and understandable. Its advantage is error prevention
 
-We used Schema Registry in Kafka. Producer sends data to Kafka with a schema (JSON). 
-Schema Registry checks the schema and assigns a unique ID to it. 
-Consumer, upon receiving the ID, downloads the schema from Registry and interprets the data accordingly.
+When using Schema Registry with Kafka, the producer sends data to Kafka with a JSON serializer. 
+The producer first registers the schema with the Schema Registry, which checks and validates the schema, assigning a unique ID to it. 
+The producer then sends the data to Kafka along with this schema ID. Upon receiving the data and schema ID, 
+the consumer queries the Schema Registry to retrieve the schema and interprets the data accordingly.
 
 Also, another common format in Schema Registry other than JSON is Avro
 
