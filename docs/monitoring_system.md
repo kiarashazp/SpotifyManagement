@@ -1,4 +1,4 @@
-![Alt text](Monitor.png)
+![Alt text](monitoring_architect.png)
 
 # Monitoring System Using Prometheus and Grafana
 
@@ -101,10 +101,13 @@ kafka-exporter:
 ![Alt text](alert.png)
 
 ### Overview Monitoring:
-![Alt text](OverviewMonitoring.png)
+![Alt text](overview-monitoring.jpeg)
 
 ### Kafka-exporter Monitoring:
 ![Alt text](kafka-exporter.png)
+
+### Clickhouse Monitoring:
+![Alt text](clickhouse-monitoring.jpeg)
 
 ### JVM Overview Monitoring Images:
 ![Alt text](JVMOverview.png)

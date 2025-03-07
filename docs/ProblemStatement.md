@@ -70,4 +70,4 @@ All services are defined in the `docker-compose.yml` file, making it easier to d
 
 **Monitoring**
 
-![alt text](Monitor.png)
+![alt text](monitoring_architect.png)
