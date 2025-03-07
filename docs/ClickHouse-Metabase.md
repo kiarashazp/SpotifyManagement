@@ -1,7 +1,6 @@
 # ClickHouse
 
-- Based on this [SQL file](../clickhouse/table_definitions.sql), the database is created and all tables are created in ClickHouse.
-- with the help of [this file], inserted data from HDFS into these tables.
+- Based on this [SQL file](../clickhouse/table_definition_and_insert_data.sql), a database is created and all tables are created in ClickHouse, and data is inserted from HDFS to ClickHouse using engines.
 
 # Metabase
 ## All Tables
