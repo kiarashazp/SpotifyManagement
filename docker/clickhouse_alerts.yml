@@ -1,0 +1,11 @@
+groups:
+  - name: clickhouse_alerts
+    rules:
+      - alert: HighMemoryUsage
+        expr: clickhouse_async_metrics{metric="MemoryUsage"} > 90
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "High memory usage in ClickHouse"
+          description: "ClickHouse memory usage is above 90% for more than 5 minutes."
