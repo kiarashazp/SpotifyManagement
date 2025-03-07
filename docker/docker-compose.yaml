@@ -200,7 +200,7 @@ services:
       - ../jmx-exporters/hdfs-jmx-exporter-config.yml:/opt/hadoop/conf/jmx_exporter.yml
     environment:
       - CLUSTER_NAME=test
-      # - HADOOP_OPTS=-javaagent:/opt/hadoop/jmx_prometheus_javaagent.jar=7074:/opt/hadoop/conf/jmx_exporter.yml
+      - HADOOP_OPTS=-javaagent:/opt/hadoop/jmx_prometheus_javaagent.jar=7074:/opt/hadoop/conf/jmx_exporter.yml
     env_file:
       - ../hadoop/hadoop.env
     networks:
@@ -307,6 +307,7 @@ services:
     ports:
       - "8123:8123"  # HTTP port
       - "9001:9000"  # Native port
+      - "9009:9009"
     volumes:
       - ../clickhouse/data:/var/lib/clickhouse
       # Remove the custom config files initially to use default configuration
@@ -322,13 +323,27 @@ services:
         soft: 262144
         hard: 262144
     networks:
-      - data-highway
+      data-highway:
+        aliases:
+          - clickhouse-server
     healthcheck:
       test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8123/ping"]
       interval: 30s
       timeout: 10s
       retries: 3
       start_period: 20s
+
+  clickhouse-exporter:
+    image: f1yegor/clickhouse-exporter:latest
+    container_name: clickhouse-exporter
+    restart: always
+    ports:
+      - '9116:9116'
+    command: ["-scrape_uri=http://clickhouse-server:8123/?query=select+metric%2C+value+from+system.metrics"]
+    networks:
+      data-highway:
+        aliases:
+          - clickhouse-exporter
 
   # Add dbt with HDFS support
   dbt:
