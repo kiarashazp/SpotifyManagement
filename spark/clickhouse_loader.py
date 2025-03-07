@@ -36,7 +36,7 @@ report_tables = [
     "report_weekday_avg_listening_time",
     "report_city_active_users",
     "report_top_songs",
-    "report_free_vs_paid_users",
+#    "report_free_vs_paid_users",
     "report_avg_session_duration",
     "report_conversion_rate",
     "report_error_status_codes",

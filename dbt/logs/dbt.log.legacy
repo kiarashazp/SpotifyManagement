@@ -1,0 +1,436 @@
+2025-03-05 09:38:50.422540 (MainThread): the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+2025-03-05 09:38:51.175025 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 09:38:51.181772 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 09:38:51.186031 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 09:38:51.190161 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 09:38:51.194720 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 09:38:51.200033 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 09:38:51.205230 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 09:38:51.209351 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 09:38:51.213466 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 09:38:51.217709 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 09:38:51.223173 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 09:38:51.227577 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 09:38:51.231685 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 09:38:51.236139 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 09:38:51.240977 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 09:38:51.245951 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 09:38:51.250908 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 09:38:51.258934 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 09:38:51.264119 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 09:38:51.268798 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:08:56.787916 (MainThread): the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+2025-03-05 11:08:57.585806 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:08:57.594159 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:08:57.598771 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:08:57.604446 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:08:57.610328 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:08:57.615936 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:08:57.621533 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:08:57.626303 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:08:57.630704 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:08:57.635904 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:08:57.642904 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:08:57.652989 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:08:57.659454 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:08:57.668033 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:08:57.676946 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:08:57.685204 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:08:57.692442 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:08:57.701459 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:08:57.706273 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:08:57.712458 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:14:52.927162 (MainThread): the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+2025-03-05 11:14:53.647244 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:14:53.654846 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:14:53.660616 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:14:53.665169 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:14:53.670050 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:14:53.676485 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:14:53.681627 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:14:53.687148 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:14:53.691703 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:14:53.696541 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:14:53.702383 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:14:53.707641 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:14:53.714219 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:14:53.721005 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:14:53.726914 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:14:53.732979 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:14:53.737142 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:14:53.739310 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:14:53.745014 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:14:53.749375 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:25:49.939791 (MainThread): the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+2025-03-05 11:25:50.816808 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:25:50.831093 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:25:50.839785 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:25:50.847913 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:25:50.856225 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:25:50.865401 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:25:50.875358 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:25:50.883781 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:25:50.892876 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:25:50.901622 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:25:50.912238 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:25:50.918496 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:25:50.923603 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:25:50.931371 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:25:50.936514 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:25:50.943328 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:25:50.950155 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:25:50.953319 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:25:50.962385 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:25:50.970243 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:48:50.976334 (MainThread): the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+2025-03-05 11:48:51.728709 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:48:51.739538 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:48:51.744950 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:48:51.750030 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:48:51.755234 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:48:51.761079 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:48:51.766394 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:48:51.770933 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:48:51.775529 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:48:51.779836 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:48:51.785344 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:48:51.790788 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:48:51.798204 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:48:51.805508 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:48:51.810107 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:48:51.815182 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:48:51.819733 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:48:51.822776 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:48:51.828640 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 11:48:51.833721 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 14:14:47.747095 (MainThread): the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+2025-03-05 14:14:48.960610 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 14:14:48.974901 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 14:14:48.983531 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 14:14:48.993753 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 14:14:49.006439 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 14:14:49.017207 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 14:14:49.032425 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 14:14:49.042307 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 14:14:49.054962 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 14:14:49.064343 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 14:14:49.076212 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 14:14:49.098554 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 14:14:49.114352 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 14:14:49.128853 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 14:14:49.141915 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 14:14:49.149416 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 14:14:49.160294 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 14:14:49.166031 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 14:14:49.177750 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 14:14:49.190124 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:48:52.839541 (MainThread): the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+2025-03-05 15:48:53.847768 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:48:53.863318 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:48:53.874652 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:48:53.882292 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:48:53.889308 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:48:53.896368 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:48:53.902389 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:48:53.909362 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:48:53.914801 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:48:53.920035 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:48:53.930108 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:48:53.942795 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:48:53.954464 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:48:53.961558 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:48:53.973858 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:48:53.985695 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:48:53.998616 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:48:54.002387 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:48:54.015414 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:48:54.029007 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:51:05.957409 (MainThread): the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+2025-03-05 15:51:07.129319 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:51:07.148761 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:51:07.157129 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:51:07.162422 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:51:07.168434 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:51:07.177628 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:51:07.190387 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:51:07.197346 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:51:07.203606 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:51:07.211659 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:51:07.224875 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:51:07.238761 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:51:07.251976 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:51:07.269818 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:51:07.279605 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:51:07.293551 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:51:07.305041 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:51:07.318767 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:51:07.331418 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:51:07.340660 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:52:12.216737 (MainThread): the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+2025-03-05 15:52:13.182944 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:52:13.192787 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:52:13.198777 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:52:13.205975 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:52:13.212365 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:52:13.220453 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:52:13.227507 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:52:13.234477 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:52:13.243867 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:52:13.250023 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:52:13.259219 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:52:13.271241 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:52:13.284424 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:52:13.295863 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:52:13.310944 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:52:13.321282 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:52:13.331715 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:52:13.344381 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:52:13.355211 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:52:13.363054 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 15:52:13.483062 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2025-03-05 15:52:15.283067 (ThreadPoolExecutor-0_0): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 36416), raddr=('172.19.0.11', 10000)>
+2025-03-05 15:52:15.283471 (ThreadPoolExecutor-0_1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 36414), raddr=('172.19.0.11', 10000)>
+2025-03-05 15:52:16.021618 (ThreadPoolExecutor-1_0): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 36452), raddr=('172.19.0.11', 10000)>
+2025-03-05 15:52:16.033571 (ThreadPoolExecutor-1_1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 36438), raddr=('172.19.0.11', 10000)>
+2025-03-05 15:52:16.474120 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 36466), raddr=('172.19.0.11', 10000)>
+2025-03-05 15:52:16.477724 (Thread-2): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 36470), raddr=('172.19.0.11', 10000)>
+2025-03-05 15:52:18.261444 (MainThread): unclosed <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 36544), raddr=('172.19.0.11', 10000)>
+2025-03-05 16:10:55.712985 (MainThread): the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+2025-03-05 16:10:55.981241 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2025-03-05 16:10:56.348719 (ThreadPoolExecutor-1_0): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 39214), raddr=('172.19.0.11', 10000)>
+2025-03-05 16:10:56.349498 (ThreadPoolExecutor-1_1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 39200), raddr=('172.19.0.11', 10000)>
+2025-03-05 16:10:56.729318 (Thread-1): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 39228), raddr=('172.19.0.11', 10000)>
+2025-03-05 16:10:56.731204 (Thread-2): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 39238), raddr=('172.19.0.11', 10000)>
+2025-03-05 16:10:58.238112 (MainThread): unclosed <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 39334), raddr=('172.19.0.11', 10000)>
+2025-03-05 16:15:18.264458 (MainThread): the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+2025-03-05 16:15:19.286806 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 16:15:19.302123 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 16:15:19.315124 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 16:15:19.325189 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 16:15:19.336747 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 16:15:19.350885 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 16:15:19.361750 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 16:15:19.373928 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 16:15:19.384613 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 16:15:19.397367 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 16:15:19.410501 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 16:15:19.423190 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 16:15:19.441432 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 16:15:19.457768 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 16:15:19.474431 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 16:15:19.490511 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 16:15:19.500416 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 16:15:19.513126 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 16:15:19.523855 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 16:15:19.537597 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 16:15:19.686380 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2025-03-05 16:15:19.990434 (ThreadPoolExecutor-1_0): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 51318), raddr=('172.19.0.11', 10000)>
+2025-03-05 16:15:19.991160 (ThreadPoolExecutor-1_1): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 51330), raddr=('172.19.0.11', 10000)>
+2025-03-05 16:15:20.431545 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 51334), raddr=('172.19.0.11', 10000)>
+2025-03-05 16:15:20.434120 (Thread-2): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 51346), raddr=('172.19.0.11', 10000)>
+2025-03-05 16:15:21.995001 (MainThread): unclosed <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 36808), raddr=('172.19.0.11', 10000)>
+2025-03-05 16:49:10.192007 (MainThread): the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+2025-03-05 16:49:10.404949 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2025-03-05 16:49:10.697785 (ThreadPoolExecutor-1_0): unclosed <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 55276), raddr=('172.19.0.11', 10000)>
+2025-03-05 16:49:10.706759 (ThreadPoolExecutor-1_1): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 55262), raddr=('172.19.0.11', 10000)>
+2025-03-05 16:49:10.917085 (Thread-1): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 55288), raddr=('172.19.0.11', 10000)>
+2025-03-05 16:49:10.919041 (Thread-2): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 55280), raddr=('172.19.0.11', 10000)>
+2025-03-05 16:49:12.004166 (MainThread): unclosed <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 55392), raddr=('172.19.0.11', 10000)>
+2025-03-05 16:55:26.570869 (MainThread): the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+2025-03-05 16:55:26.791103 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2025-03-05 16:55:27.062353 (ThreadPoolExecutor-1_0): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 55074), raddr=('172.19.0.11', 10000)>
+2025-03-05 16:55:27.077578 (ThreadPoolExecutor-1_1): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 55076), raddr=('172.19.0.11', 10000)>
+2025-03-05 16:55:27.257728 (Thread-1): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 55096), raddr=('172.19.0.11', 10000)>
+2025-03-05 16:55:27.262017 (Thread-2): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 55092), raddr=('172.19.0.11', 10000)>
+2025-03-05 16:55:28.496639 (MainThread): unclosed <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 55210), raddr=('172.19.0.11', 10000)>
+2025-03-05 16:58:07.859437 (MainThread): the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+2025-03-05 16:58:08.064695 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 16:58:08.153778 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2025-03-05 16:58:08.344374 (ThreadPoolExecutor-1_0): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 55178), raddr=('172.19.0.11', 10000)>
+2025-03-05 16:58:08.344733 (ThreadPoolExecutor-1_1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 55190), raddr=('172.19.0.11', 10000)>
+2025-03-05 16:58:08.556659 (Thread-2): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 55194), raddr=('172.19.0.11', 10000)>
+2025-03-05 16:58:08.557811 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 55206), raddr=('172.19.0.11', 10000)>
+2025-03-05 16:59:00.344192 (MainThread): the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+2025-03-05 16:59:00.545470 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 16:59:00.654484 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2025-03-05 16:59:00.894789 (ThreadPoolExecutor-1_0): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 33728), raddr=('172.19.0.11', 10000)>
+2025-03-05 16:59:00.895164 (ThreadPoolExecutor-1_1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 33720), raddr=('172.19.0.11', 10000)>
+2025-03-05 16:59:01.168941 (Thread-1): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 33738), raddr=('172.19.0.11', 10000)>
+2025-03-05 16:59:01.172653 (Thread-2): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 33742), raddr=('172.19.0.11', 10000)>
+2025-03-05 16:59:44.375017 (MainThread): the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+2025-03-05 16:59:44.593440 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2025-03-05 16:59:44.897539 (ThreadPoolExecutor-1_0): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 39012), raddr=('172.19.0.11', 10000)>
+2025-03-05 16:59:44.905395 (ThreadPoolExecutor-1_1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 39010), raddr=('172.19.0.11', 10000)>
+2025-03-05 16:59:45.105300 (Thread-2): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 39034), raddr=('172.19.0.11', 10000)>
+2025-03-05 16:59:45.115381 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 39022), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:00:37.337221 (MainThread): unclosed <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 40164), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:00:37.337442 (MainThread): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 39042), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:00:37.337613 (MainThread): unclosed <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 39074), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:09:16.015743 (MainThread): the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+2025-03-05 17:09:16.242781 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:09:16.256657 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:09:16.265253 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:09:16.325348 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:09:16.355075 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2025-03-05 17:09:16.664862 (ThreadPoolExecutor-1_0): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 35028), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:09:16.665409 (ThreadPoolExecutor-1_1): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 35018), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:09:17.644367 (Thread-2): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 35036), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:09:17.645599 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 35050), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:09:33.518748 (Thread-2): unclosed <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 35092), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:10:16.982528 (Thread-4): unclosed <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 46802), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:10:20.143142 (MainThread): unclosed <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 59630), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:10:20.143444 (MainThread): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 35076), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:13:18.239664 (MainThread): the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+2025-03-05 17:13:18.462968 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:13:18.475747 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:13:18.481655 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:13:18.540914 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:13:18.563696 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2025-03-05 17:13:18.730741 (ThreadPoolExecutor-1_0): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 48722), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:13:18.736468 (ThreadPoolExecutor-1_1): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 48728), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:13:19.282619 (Thread-1): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 48738), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:13:19.297472 (Thread-2): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 48742), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:14:22.612509 (MainThread): unclosed <ssl.SSLSocket fd=18, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.0.14', 38156), raddr=('3.84.107.9', 443)>
+2025-03-05 17:14:52.564861 (MainThread): the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+2025-03-05 17:14:53.450488 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:14:53.459917 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:14:53.465393 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:14:53.471468 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:14:53.482000 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:14:53.489398 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:14:53.497043 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:14:53.504094 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:14:53.508414 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:14:53.515726 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:14:53.530253 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:14:53.545510 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:14:53.557556 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:14:53.572896 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:14:53.579232 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:14:53.593029 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:14:53.604158 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:14:53.616904 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:14:53.626181 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:14:53.635129 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:14:53.757895 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2025-03-05 17:14:53.875937 (ThreadPoolExecutor-0_0): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 40148), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:14:53.969365 (ThreadPoolExecutor-1_0): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 40156), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:14:54.088693 (ThreadPoolExecutor-1_0): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 40158), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:14:54.210483 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 40162), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:15:26.850191 (MainThread): the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+2025-03-05 17:15:27.090137 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2025-03-05 17:15:27.291089 (ThreadPoolExecutor-0_0): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 48212), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:15:27.411112 (ThreadPoolExecutor-1_0): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 48228), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:15:27.562413 (ThreadPoolExecutor-1_0): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 48236), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:15:27.698514 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 48246), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:15:46.078287 (MainThread): unclosed <socket.socket fd=16, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.0.14', 38344)>
+2025-03-05 17:16:00.675931 (MainThread): the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+2025-03-05 17:16:01.759999 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:16:01.770746 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:16:01.776469 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:16:01.781030 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:16:01.786859 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:16:01.796359 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:16:01.804517 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:16:01.810164 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:16:01.815575 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:16:01.825893 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:16:01.832705 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:16:01.850816 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:16:01.870059 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:16:01.892452 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:16:01.911100 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:16:01.924108 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:16:01.937454 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:16:01.957661 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:16:01.968838 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:16:01.974882 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:16:02.113431 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2025-03-05 17:16:02.258524 (ThreadPoolExecutor-0_0): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 58458), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:16:02.363753 (ThreadPoolExecutor-1_0): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 58464), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:16:02.667485 (ThreadPoolExecutor-1_0): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 58474), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:16:02.858084 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 58484), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:17:49.099183 (Thread-1): unclosed <socket.socket fd=15, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 58546), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:19:12.776644 (Thread-1): unclosed <socket.socket fd=15, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 44604), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:19:20.996864 (Thread-1): unclosed <socket.socket fd=15, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 51310), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:19:25.891226 (Thread-1): unclosed <socket.socket fd=15, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 60708), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:19:49.729620 (Thread-1): unclosed <socket.socket fd=15, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 60710), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:19:53.199200 (MainThread): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 39768), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:27:05.285886 (MainThread): the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+2025-03-05 17:27:05.561062 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:27:05.650186 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2025-03-05 17:27:05.811510 (ThreadPoolExecutor-0_0): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 54878), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:27:05.912262 (ThreadPoolExecutor-1_0): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 54882), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:27:06.080072 (ThreadPoolExecutor-1_0): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 54894), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:27:06.256915 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 54900), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:27:15.259822 (MainThread): unclosed <socket.socket fd=16, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.19.0.14', 56984), raddr=('3.84.107.9', 443)>
+2025-03-05 17:29:01.707326 (MainThread): the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+2025-03-05 17:29:01.936505 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:29:02.025795 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2025-03-05 17:29:02.128605 (ThreadPoolExecutor-0_0): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 38568), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:29:02.242693 (ThreadPoolExecutor-1_0): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 38574), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:29:02.422198 (ThreadPoolExecutor-1_0): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 38576), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:29:02.759249 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 38592), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:29:06.891952 (MainThread): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 38682), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:30:12.321797 (MainThread): the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+2025-03-05 17:30:13.345853 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:30:13.360540 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:30:13.366022 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:30:13.371157 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:30:13.380314 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:30:13.388111 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:30:13.399605 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:30:13.411199 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:30:13.418992 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:30:13.426542 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:30:13.439879 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:30:13.462885 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:30:13.473792 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:30:13.485524 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:30:13.500565 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:30:13.514585 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:30:13.527950 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:30:13.540504 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:30:13.549068 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:30:13.557874 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:30:13.696088 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2025-03-05 17:30:13.811289 (ThreadPoolExecutor-0_0): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 32858), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:30:13.909721 (ThreadPoolExecutor-1_0): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 32868), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:30:14.090024 (ThreadPoolExecutor-1_0): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 32884), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:30:14.201639 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 32896), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:30:18.048551 (MainThread): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 33004), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:41:50.374624 (MainThread): the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+2025-03-05 17:41:50.609508 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-05 17:41:50.738794 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2025-03-05 17:41:50.856787 (ThreadPoolExecutor-0_0): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 60832), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:41:50.958288 (ThreadPoolExecutor-1_0): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 60844), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:41:51.108359 (ThreadPoolExecutor-1_0): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 60848), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:41:51.321651 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 60856), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:42:00.480461 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 60866), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:42:10.238790 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 36246), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:42:26.633353 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 40996), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:43:01.199770 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 41380), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:47:15.421959 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 43410), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:47:40.595586 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 42858), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:47:50.110982 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 35504), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:49:41.130804 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 35516), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:51:12.802020 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 57194), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:51:20.138663 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 57738), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:51:21.888066 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 59442), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:51:39.790322 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 59452), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:51:43.276750 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 43494), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:51:47.911987 (Thread-1): unclosed <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 38362), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:53:06.015429 (Thread-1): unclosed <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 38392), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:53:26.986922 (Thread-1): unclosed <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 57510), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:53:52.345561 (Thread-1): unclosed <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 50338), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:53:57.467970 (Thread-1): unclosed <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 35908), raddr=('172.19.0.11', 10000)>
+2025-03-05 17:54:00.849702 (MainThread): unclosed <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.19.0.14', 58868), raddr=('172.19.0.11', 10000)>
+2025-03-07 13:36:17.761620 (MainThread): the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+2025-03-07 13:36:18.047298 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2025-03-07 13:36:18.181191 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2025-03-07 13:36:47.426333 (MainThread): the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+2025-03-07 13:36:47.664079 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2025-03-07 18:03:16.298286 (MainThread): the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+2025-03-07 18:03:16.552067 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2025-03-07 18:03:53.044374 (MainThread): the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+2025-03-07 18:03:53.244298 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``

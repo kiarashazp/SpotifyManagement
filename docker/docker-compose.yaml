@@ -200,7 +200,7 @@ services:
       - ../jmx-exporters/hdfs-jmx-exporter-config.yml:/opt/hadoop/conf/jmx_exporter.yml
     environment:
       - CLUSTER_NAME=test
-      - HADOOP_OPTS=-javaagent:/opt/hadoop/jmx_prometheus_javaagent.jar=7074:/opt/hadoop/conf/jmx_exporter.yml
+#      - HADOOP_OPTS=-javaagent:/opt/hadoop/jmx_prometheus_javaagent.jar=7074:/opt/hadoop/conf/jmx_exporter.yml
     env_file:
       - ../hadoop/hadoop.env
     networks:
@@ -351,10 +351,10 @@ services:
     container_name: dbt
     volumes:
       - ../dbt:/usr/app
-      - ../hadoop/conf:/etc/hadoop/conf
-      - ./dbt-entrypoint.sh:/entrypoint.sh
+#      - ../hadoop/conf:/etc/hadoop/conf
+#      - ./dbt-entrypoint.sh:/entrypoint.sh
       # Add direct access to Hadoop configurations
-      - ../hadoop/hadoop.env:/etc/hadoop/hadoop.env
+ #     - ../hadoop/hadoop.env:/etc/hadoop/hadoop.env
     working_dir: /usr/app
     depends_on:
       - clickhouse-server
@@ -366,11 +366,11 @@ services:
       - data-highway
     environment:
       - DBT_PROFILES_DIR=/usr/app/profiles
-      - HADOOP_CONF_DIR=/etc/hadoop/conf
-      - HADOOP_USER_NAME=root
-      - SPARK_HOME=/usr/local/spark
+  #    - HADOOP_CONF_DIR=/etc/hadoop/conf
+   #   - HADOOP_USER_NAME=root
+    #  - SPARK_HOME=/usr/local/spark
       - PYTHONPATH=/usr/local/spark/python:/usr/local/spark/python/lib/py4j-0.10.9-src.zip
-    entrypoint: ["/bin/bash", "/entrypoint.sh"]
+ #   entrypoint: ["/bin/bash", "/entrypoint.sh"]
     # Keep the container running
     tty: true
     stdin_open: true
