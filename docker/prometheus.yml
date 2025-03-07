@@ -56,5 +56,5 @@ alerting:
         - targets: ['alertmanager:9093']
 
 rule_files:
-  - 'prometheus_up_alert.yml'
+  - 'prometheus_alerts.yml'
   - 'clickhouse_alerts.yml'
