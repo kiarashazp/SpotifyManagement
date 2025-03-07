@@ -425,6 +425,7 @@ services:
       interval: 15s
       timeout: 5s
       retries: 5
+
   prometheus:
     image: prom/prometheus:latest
     container_name: prometheus
@@ -432,6 +433,8 @@ services:
       - "9099:9090"
     volumes:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./prometheus_alerts.yml:/etc/prometheus/prometheus_alerts.yml
+      - ./clickhouse_clerts.yml:/etc/prometheus/clickhouse_alerts.yml
     networks:
       - data-highway
 
@@ -452,6 +455,8 @@ services:
       - "9093:9093"
     volumes:
       - ./alertmanager.yml:/etc/alertmanager/alertmanager.yml
+      - ./telegram.tmpl:/etc/alertmanager/telegram.tmpl
+
 
   grafana:
     image: grafana/grafana:latest

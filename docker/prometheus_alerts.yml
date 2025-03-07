@@ -1,5 +1,5 @@
 groups:
-- name: prometheus_up_alerts
+- name: prometheus_alerts
   rules:
   - alert: PrometheusUp
     expr: up{job="prometheus"} == 1
