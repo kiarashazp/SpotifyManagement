@@ -1,0 +1,11 @@
+groups:
+- name: prometheus_up_alerts
+  rules:
+  - alert: PrometheusUp
+    expr: up{job="prometheus"} == 1
+    for: 1m
+    labels:
+      severity: info
+    annotations:
+      summary: "Prometheus is running"
+      description: "Prometheus instance {{ $labels.instance }} is up."
