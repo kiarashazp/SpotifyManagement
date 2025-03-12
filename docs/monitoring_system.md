@@ -100,6 +100,10 @@ kafka-exporter:
 ### Alertmanager:
 ![Alt text](alert.png)
 
+![Alt text](alert_1.JPG)
+
+![Alt text](alert_2.JPG)
+
 ### Overview Monitoring:
 ![Alt text](overview-monitoring.jpeg)
 
