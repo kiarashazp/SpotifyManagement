@@ -1,9 +1,8 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, from_json, expr, year, month, day, hour
-from pyspark.sql.types import StructType, StructField, StringType, IntegerType, DoubleType, BooleanType, LongType
+from pyspark.sql.types import StructType
 import requests
 import json
-import time
 
 # Create Spark session with Kafka packages
 spark = (
@@ -29,49 +28,36 @@ kafka_topics = [
 ]
 
 
-def fetch_schema_from_registry(topic):
+def fetch_schema_from_registry(subject):
     """
-    Fetch the schema for a given topic from the Schema Registry.
-    Returns a StructType object representing the schema.
+    Fetch the latest JSON schema for a given subject from the Schema Registry.
     """
-    try:
-        # Fetch the latest schema for the topic
-        response = requests.get(f"{schema_registry_url}/subjects/{topic}-value/versions/latest")
-        response.raise_for_status()  # Raise an exception for HTTP errors
-        schema_info = response.json()
-
-        # Extract the schema string
-        schema_str = schema_info["schema"]
-
-        # Parse the schema string into a dictionary
-        schema_dict = json.loads(schema_str)
-
-        # Convert the schema dictionary to a Spark StructType
-        fields = []
-        for field in schema_dict["fields"]:
-            field_type = field["type"]
-            spark_type = {
-                "string": StringType(),
-                "int": IntegerType(),
-                "long": LongType(),
-                "double": DoubleType(),
-                "boolean": BooleanType(),
-            }.get(field_type)
-            if not spark_type:
-                raise ValueError(f"Unsupported field type: {field_type}")
-            fields.append(StructField(field["name"], spark_type))
-
-        return StructType(fields)
-
-    except Exception as e:
-        print(f"Error fetching schema for topic {topic}: {e}")
-        raise
+    url = f"{schema_registry_url}/subjects/{subject}-value/versions/latest"
+    response = requests.get(url)
+    if response.status_code == 200:
+        schema_data = response.json()
+        schema_str = schema_data["schema"]
+        return schema_str
+    else:
+        raise Exception(f"Failed to fetch schema for subject {subject}. Status code: {response.status_code}")
 
 
-def process_stream(event_type, schema):
+def json_schema_to_spark_schema(schema_str):
+    """
+    Convert JSON schema (as string) to Spark StructType schema.
+    """
+    schema_dict = json.loads(schema_str)
+    return StructType.fromJson(schema_dict)
+
+
+def process_stream(event_type):
     """Process a Kafka stream for a specific event type and write it to HDFS"""
 
     print(f"Processing stream for {event_type}")
+
+    # Fetch JSON schema from Schema Registry
+    schema_str = fetch_schema_from_registry(event_type)
+    schema = json_schema_to_spark_schema(schema_str)
 
     # Read from Kafka
     df = (
@@ -82,7 +68,7 @@ def process_stream(event_type, schema):
         .load()
     )
 
-    # Parse JSON data
+    # Parse JSON data using the fetched schema
     parsed_df = (
         df.select(
             from_json(col("value").cast("string"), schema).alias("data"), "timestamp"
@@ -92,7 +78,7 @@ def process_stream(event_type, schema):
     )
 
     # Add date partitioning columns if 'ts' exists
-    if "ts" in [field.name for field in schema.fields]:
+    if "ts" in schema.fieldNames():
         parsed_df = (
             parsed_df.withColumn(
                 "event_date", expr("from_unixtime(ts/1000, 'yyyy-MM-dd')")
@@ -119,14 +105,7 @@ def process_stream(event_type, schema):
 # Process each event type
 active_streams = []
 for topic in kafka_topics:
-    try:
-        # Fetch the schema for the topic
-        schema = fetch_schema_from_registry(topic)
-
-        # Start processing the stream
-        active_streams.append(process_stream(topic, schema))
-    except Exception as e:
-        print(f"Skipping topic {topic} due to error: {e}")
+    active_streams.append(process_stream(topic))
 
 # Wait for all streams to terminate (or run indefinitely)
 try:
