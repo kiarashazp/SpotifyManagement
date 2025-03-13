@@ -138,5 +138,7 @@ schema-registry-init:
     - data-highway
 ```
 
+![Alt text](Schema_Registery.jpeg)
+
 This guide should assist in setting up and using the Schema Registry in a Kafka-based environment. 
 For further assistance or additional configurations, refer to the official documentation or seek support from the community.
