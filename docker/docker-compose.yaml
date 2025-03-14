@@ -147,16 +147,18 @@ services:
       - SPARK_MASTER_OPTS=-javaagent:/opt/bitnami/spark/jars/jmx_prometheus_javaagent.jar=7072:/opt/bitnami/spark/conf/jmx_exporter.yml
     ports:
       - '8081:8081'  # Spark Master UI
-      - '7072:7072'  # JMX Exporter port
+      - '10000:10000'  # For Thrift server
+      - '7077:7077'    # For Spark master
     volumes:
+      - ../spark/bronze_ingest.py:/opt/bitnami/scripts/bronze_ingest.py
       - ../jmx-exporters/spark-jmx-exporter-config.yml:/opt/bitnami/spark/conf/jmx_exporter.yml
       - ../jmx-exporters/jmx_prometheus_javaagent-1.0.1.jar:/opt/bitnami/spark/jars/jmx_prometheus_javaagent.jar
+      - ./spark-entrypoint.sh:/opt/bitnami/scripts/spark-entrypoint.sh
     networks:
       data-highway:
         aliases:
           - spark
-    command: /opt/bitnami/spark/sbin/start-master.sh
-
+    entrypoint: ["/bin/bash", "/opt/bitnami/scripts/spark-entrypoint.sh"]
 
   spark-worker:
     image: docker.io/bitnami/spark:3.5
@@ -267,7 +269,7 @@ services:
       - HADOOP_OPTS=-javaagent:/opt/hadoop/jmx_prometheus_javaagent.jar=7077:/opt/hadoop/conf/jmx_exporter.yml
     ports:
       - 8042:8042
-      - 7077:7077  # JMX Exporter port
+      - 17077:7077
     volumes:
       - ../jmx-exporters/hdfs-jmx-exporter-config.yml:/opt/hadoop/conf/jmx_exporter.yml
       - ../jmx-exporters/jmx_prometheus_javaagent-1.0.1.jar:/opt/hadoop/jmx_prometheus_javaagent.jar
@@ -383,6 +385,7 @@ services:
       - POSTGRES_DB=metabaseappdb
     volumes:
       - ../postgres-metabase-data:/var/lib/postgresql/data
+      - ./init-metabase-db.sh:/docker-entrypoint-initdb.d/init-metabase-db.sh
     ports:
       - "5433:5432"  # Using 5433 externally to avoid conflict with Hive's PostgreSQL
     networks:
